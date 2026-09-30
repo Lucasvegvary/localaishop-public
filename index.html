@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Local AI Shop: You work two jobs. Let's shrink the second one.</title>
+<meta name="description" content="The Second Shift Study: a human-verified assessment and action plan for the work you still do by hand after close. Owner-run home and trade service businesses in Napa, Solano and Sonoma. $999 flat, guarantee and conditions in writing.">
+<link rel="canonical" href="https://localaishop.com/">
+<meta name="theme-color" content="#111418">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Local AI Shop">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://localaishop.com/">
+<meta property="og:title" content="The Local AI Shop: You work two jobs. Let's shrink the second one.">
+<meta property="og:description" content="The Second Shift Study: a human-verified assessment and action plan for the work you still do by hand after close. Owner-run home and trade service businesses in Napa, Solano and Sonoma. $999 flat, guarantee and conditions in writing.">
+<meta property="og:image" content="https://localaishop.com/photos/napa-balloons-hero.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1066">
+<meta property="og:image:alt" content="Hot-air balloons over Napa">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://localaishop.com/#website",
+      "url": "https://localaishop.com/",
+      "name": "The Local AI Shop",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://localaishop.com/#business" }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://localaishop.com/#business",
+      "name": "The Local AI Shop",
+      "url": "https://localaishop.com/",
+      "description": "The Second Shift Study: a human-verified assessment and action plan for the work you still do by hand after close. Owner-run home and trade service businesses in Napa, Solano and Sonoma. $999 flat, guarantee and conditions in writing.",
+      "email": "lucas@localaishop.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "301 Georgia Street",
+        "addressLocality": "Vallejo",
+        "addressRegion": "CA",
+        "postalCode": "94590",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Napa County, California" },
+        { "@type": "AdministrativeArea", "name": "Solano County, California" },
+        { "@type": "AdministrativeArea", "name": "Sonoma County, California" }
+      ],
+      "founder": { "@type": "Person", "name": "Lucas Vegvary", "jobTitle": "Founder" },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "itemOffered": { "@type": "Service", "name": "The 15-minute mini-audit" }
+        },
+        {
+          "@type": "Offer",
+          "price": "999",
+          "priceCurrency": "USD",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "The Second Shift Study",
+            "description": "A human-verified assessment and action plan for the work you still do by hand after close."
+          }
+        },
+        {
+          "@type": "Offer",
+          "price": "2900",
+          "priceCurrency": "USD",
+          "itemOffered": { "@type": "Service", "name": "The First Shift Build" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --accent:#F06000;
+    --accent-dark:#c94f00;
+    --accent-deep:#a84200;
+    --ink:#111418;
+    --ink-2:#1b2027;
+    --paper:#faf9f6;
+    --card:#ffffff;
+    --line:#e6e2da;
+    --muted:#5d6570;
+    --good:#0d8a4f;
+    --max:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  [id]{scroll-margin-top:76px}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+  h1,h2,h3,h4{font-family:Georgia,'Times New Roman',serif;font-weight:700;line-height:1.15;letter-spacing:-.01em}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  section{padding:84px 0}
+  .kicker{display:block;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:14px}
+  .lead{font-size:20px;color:var(--muted);max-width:660px}
+  .btn{display:inline-block;background:var(--accent-dark);color:#fff;text-decoration:none;font-weight:700;font-size:16px;padding:16px 28px;border-radius:10px;transition:background .15s;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+  .btn:hover{background:var(--accent-deep)}
+  .btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
+  .btn.ghost:hover{background:rgba(255,255,255,.08)}
+  .sub-note{display:block;margin-top:12px;font-size:13.5px;color:var(--muted)}
+  .center{text-align:center}
+  h2.sec{font-size:clamp(26px,3.6vw,36px);max-width:680px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(17,20,24,.93);backdrop-filter:blur(8px);color:#fff}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:Georgia,serif;font-weight:700;font-size:20px;text-decoration:none}
+  .logo span{color:var(--accent)}
+  nav .links{display:flex;gap:26px;align-items:center;font-size:14.5px}
+  nav .links a{text-decoration:none;opacity:.85}
+  nav .links a:hover{opacity:1}
+  nav .links .btn{padding:10px 18px;font-size:14px;opacity:1}
+  .mnav{display:none;position:relative}
+  .mnav summary{list-style:none;cursor:pointer;font-size:14.5px;padding:8px 12px;border:1px solid rgba(255,255,255,.3);border-radius:8px}
+  .mnav summary::-webkit-details-marker{display:none}
+  .mnav[open] summary{background:rgba(255,255,255,.1)}
+  .mnav .panel{position:absolute;right:0;top:44px;background:var(--ink-2);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:10px 0;min-width:190px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+  .mnav .panel a{display:block;padding:10px 18px;text-decoration:none;font-size:15px}
+  .mnav .panel a:hover{background:rgba(255,255,255,.06)}
+  @media(max-width:760px){
+    nav .links a:not(.btn){display:none}
+    .mnav{display:block}
+  }
+  @media(max-width:560px){
+    html,body{overflow-x:hidden;overflow-x:clip}
+    .wrap{padding-inline:20px}
+    nav .wrap{height:60px;gap:12px}
+    nav .links>.btn{display:none}
+    .logo{font-size:18px;white-space:nowrap}
+    .mnav{margin-left:auto}
+    .mnav .panel{right:0}
+  }
+
+  /* hero */
+  .hero{background:linear-gradient(180deg,rgba(15,17,21,0) 0%,rgba(15,17,21,.45) 62%,rgba(15,17,21,.93) 100%),linear-gradient(100deg,rgba(15,17,21,.96) 0%,rgba(15,17,21,.88) 42%,rgba(16,19,24,.42) 72%,rgba(16,19,24,.18) 100%),url("photos/napa-balloons-hero.jpg") 72% 30%/cover no-repeat;color:#fff;padding:96px 0 84px}
+  .hero .kicker{color:var(--accent)}
+  .hero h1{font-size:clamp(36px,5.6vw,58px);max-width:780px}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero .lead{color:#c3cad3;margin:22px 0 30px}
+  .hero .ctas{display:flex;gap:16px;flex-wrap:wrap}
+  .strip{border-top:1px solid rgba(255,255,255,.12);margin-top:56px;padding-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .strip h4{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:15px;font-weight:700;margin-bottom:2px}
+  .strip p{font-size:13.5px;color:#9aa3ad}
+  @media(max-width:820px){.strip{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){
+    .hero{padding:48px 0 60px;background:linear-gradient(180deg,rgba(15,17,21,.88) 0%,rgba(18,21,27,.84) 55%,rgba(21,25,32,.94) 100%),url("photos/napa-balloons-hero.jpg") 68% center/cover no-repeat}
+    .hero .lead{font-size:17px;margin:16px 0 22px}
+    .hero .ctas{display:grid;grid-template-columns:1fr}
+    .hero .ctas .btn{text-align:center;width:100%}
+    .strip{grid-template-columns:1fr}
+    section{padding:64px 0}
+  }
+
+  /* knocked */
+  .knocked{background:#fff4ec;border-block:1px solid #f4d9c4;padding:56px 0}
+  .knocked .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
+  @media(max-width:820px){.knocked .wrap{grid-template-columns:1fr}}
+  .knocked h2{font-size:27px;margin-bottom:10px}
+  .knocked p{max-width:660px;color:#4b3a2d;margin-bottom:6px}
+  .knocked .btn{margin-top:14px}
+  .knocked img{width:100%;border-radius:14px;box-shadow:0 14px 36px rgba(75,58,45,.22);display:block}
+  .knocked .cap{font-size:12px;color:#8a7462;margin-top:8px}
+
+  /* steps */
+  .how .lead{margin-top:14px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 22px;position:relative}
+  a.step{text-decoration:none;display:block}
+  a.step:hover{border-color:var(--accent-dark)}
+  .step .n{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dark);font-family:-apple-system,sans-serif}
+  .step h3{font-size:18px;margin:10px 0 8px}
+  .step p{font-size:14.5px;color:var(--muted)}
+  .step .t{display:block;margin-top:14px;font-size:12.5px;font-weight:700;color:var(--ink)}
+  @media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+  /* report */
+  .report .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  @media(max-width:880px){.report .wrap{grid-template-columns:1fr}}
+  .report ol{list-style:none;counter-reset:sl;margin-top:26px}
+  .report ol li{counter-increment:sl;padding:11px 0 11px 46px;position:relative;border-bottom:1px solid var(--line);font-size:15.5px}
+  .report ol li::before{content:counter(sl,decimal-leading-zero);position:absolute;left:0;top:11px;font-weight:800;color:var(--accent-dark);font-size:13px;letter-spacing:.06em;font-family:-apple-system,sans-serif}
+  .paper{background:#fff;border:1px solid var(--line);border-radius:6px;padding:34px 36px;box-shadow:0 14px 40px rgba(17,20,24,.14);transform:rotate(.4deg)}
+  .paper .ph-head{font-family:Georgia,serif;font-size:17px;font-weight:700;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:4px;display:flex;justify-content:space-between;align-items:baseline}
+  .paper .ph-head small{font-family:-apple-system,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .paper table{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px}
+  .paper th{text-align:left;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding:6px 6px;border-bottom:1px solid var(--ink);font-family:-apple-system,sans-serif}
+  .paper td{padding:9px 6px;border-bottom:1px solid var(--line)}
+  .paper .sum{margin-top:16px;font-size:14px;line-height:1.65}
+  .paper .sum b{color:var(--accent-deep)}
+  .paper .wm{margin-top:16px;font-size:10.5px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;font-family:-apple-system,sans-serif}
+  @media(max-width:560px){.paper{padding:24px 18px;transform:none}}
+
+  /* guarantee */
+  .guarantee{background:var(--ink);color:#fff}
+  .guarantee .kicker{color:var(--accent)}
+  .gdoc{background:var(--paper);color:var(--ink);border-radius:14px;max-width:760px;margin:40px auto 0;padding:44px 48px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+  .gdoc::before{content:"";position:absolute;inset:10px;border:1.5px solid var(--line);border-radius:9px;pointer-events:none}
+  .gdoc .gk{font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-dark);text-align:center;display:block;font-family:-apple-system,sans-serif}
+  .gdoc h3{text-align:center;font-size:24px;margin:10px 0 22px}
+  .gdoc p.text{font-size:16.5px;line-height:1.75}
+  .gdoc .sig{margin-top:26px;display:flex;justify-content:space-between;align-items:flex-end;font-size:13px;color:var(--muted)}
+  .gdoc .sig b{display:block;font-size:15px;color:var(--ink)}
+  @media(max-width:640px){.gdoc{padding:34px 24px}}
+
+  /* pricing */
+  .prices-intro{max-width:680px;margin-top:14px;color:var(--muted);font-size:15.5px}
+  .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+  @media(max-width:900px){.prices{grid-template-columns:1fr}}
+  .price{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 26px;display:flex;flex-direction:column}
+  .price.feature{border-color:var(--accent-dark);border-width:2px}
+  .price .tag{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-family:-apple-system,sans-serif}
+  .price h3{font-size:20px;margin:8px 0 2px}
+  .price .amount{font-size:34px;font-weight:800;letter-spacing:-.02em;margin:10px 0 4px;font-family:-apple-system,sans-serif}
+  .price .amount small{font-size:14px;font-weight:600;color:var(--muted)}
+  .price .twoways{background:#fff4ec;border:1px solid #f4d9c4;border-radius:8px;padding:12px 14px;font-size:14px;margin:8px 0 4px;color:#4b3a2d}
+  .price ul{list-style:none;margin:16px 0 22px;flex:1}
+  .price li{font-size:14.5px;padding:7px 0 7px 26px;position:relative;color:#3c434c}
+  .price li::before{content:"—";position:absolute;left:0;color:var(--accent-dark);font-weight:800}
+  .price .btn{text-align:center}
+  .price .note{font-size:12.5px;color:var(--muted);margin-top:12px}
+
+  /* straight talk */
+  .straight{background:var(--card);border-block:1px solid var(--line)}
+  .straight .cols{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:36px}
+  @media(max-width:820px){.straight .cols{grid-template-columns:1fr}}
+  .straight h3{font-size:18px;margin-bottom:10px}
+  .straight p{font-size:15.5px;color:#3c434c;margin-bottom:14px}
+  .plate{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--accent-dark);border-radius:10px;padding:16px 20px;font-size:15px}
+  .plate h4{font-size:15.5px;margin-bottom:4px}
+  .plate p{font-size:14.5px;margin:0}
+
+  /* founder */
+  .founder .wrap{display:flex;gap:44px;align-items:flex-start;flex-wrap:wrap}
+  .founder .ph{flex:0 0 220px;height:260px;border-radius:14px;background:linear-gradient(160deg,var(--ink),var(--ink-2));color:#9aa3ad;display:flex;align-items:center;justify-content:center;font-size:13px;text-align:center;padding:20px}
+  .founder .bio{flex:1;min-width:280px}
+  .founder .bio p{color:#3c434c;margin-bottom:14px;font-size:16px}
+
+  /* faq */
+  details.q{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+  details.q summary{cursor:pointer;padding:20px 24px;font-weight:700;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  details.q summary::-webkit-details-marker{display:none}
+  details.q summary::after{content:"+";font-size:22px;font-weight:400;color:var(--accent-dark);flex:0 0 auto}
+  details.q[open] summary::after{content:"–"}
+  details.q .a{padding:0 24px 22px;color:#3c434c;font-size:15.5px;max-width:820px}
+
+  /* final cta */
+  .final{background:linear-gradient(180deg,rgba(27,32,39,.93),rgba(17,20,24,.97)),url("photos/napa-vineyard-hero.jpg") center 70%/cover no-repeat;color:#fff;text-align:center}
+  .final h2{font-size:clamp(30px,4.5vw,44px);max-width:720px;margin:0 auto 18px}
+  .final p{color:#b9c0c9;max-width:560px;margin:0 auto 34px}
+  .final a.tel{color:#fff;font-weight:700;text-decoration:none;border-bottom:1px solid var(--accent)}
+
+  footer{background:var(--ink);color:#8d96a1;font-size:13.5px;padding:44px 0 56px;border-top:1px solid rgba(255,255,255,.08)}
+  footer .wrap{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+  footer b{color:#fff}
+  footer a{color:#c6ccd4}
+  footer .legal{max-width:520px;line-height:1.7}
+
+  .founder .ph{position:relative;overflow:hidden}
+  .founder .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .founder .ph .initials{font-family:Georgia,'Times New Roman',serif;font-size:72px;font-weight:700;color:#fff;letter-spacing:.04em;line-height:1}
+  .gdoc p.conds{font-size:16.5px;line-height:1.75;margin-top:16px;color:#2e343b}
+  .paper .sample-link{display:inline-block;margin-top:14px;font-size:14px;font-weight:700;color:var(--accent-deep)}
+
+  @media print{ nav,.hero,.knocked,.how,.report,.prices-sec,.straight,.founder,.faq,.final,footer{display:none} .guarantee{background:#fff;color:#000;padding:0} .gdoc{box-shadow:none} }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">The Local AI Shop<span>.</span></a>
+    <div class="links">
+      <a href="#how">How it works</a>
+      <a href="#guarantee">The guarantee</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">Questions</a>
+      <details class="mnav">
+        <summary>Menu</summary>
+        <div class="panel">
+          <a href="#how">How it works</a>
+          <a href="#guarantee">The guarantee</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">Questions</a>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book your free 15-minute call</a>
+        </div>
+      </details>
+      <a class="btn" href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book your free 15-minute call</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="kicker">Napa's local AI shop, for owner-run home and trade service businesses with 2 to 20 people</span>
+    <h1>You work two jobs. <em>Let's shrink the second one.</em></h1>
+    <p class="lead">You close at six. Then you go home and start the second job. The second shift is the email, the scheduling, the quotes, the follow-up that waits for you after the trucks are parked. The Second Shift Study counts those hours with you, matches each one to a boring, proven tool that fits, and hands you a written plan for getting them back, checked over by a competent human in the loop before you see it. One question sorts out whether this is for you: who handles the invoicing and scheduling after you close up? If that's you, keep reading.</p>
+    <div class="ctas">
+      <a class="btn" href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Get one real fix free in 15 minutes</a>
+      <a class="btn ghost" href="#guarantee">Read the guarantee first</a>
+    </div>
+    <span class="sub-note" style="color:#9aa3ad">The 15 minutes is free and specific to your business. One useful idea to keep. No obligation.</span>
+    <div class="strip">
+      <div><h4>Guaranteed in writing.</h4><p>Five reclaimable hours a week, confirmed by you, or I refund the $999. You keep your Shift Sheet either way. Full wording below.</p></div>
+      <div><h4>$999, flat, for the full Study.</h4><p>The 15 minutes stays free. Stated up front because you'd find out anyway.</p></div>
+      <div><h4>No contracts.</h4><p>One Study. What happens after is entirely up to you.</p></div>
+      <div><h4>You keep the report.</h4><p>Every page, every tool, either way.</p></div>
+    </div>
+  </div>
+</header>
+
+<div class="knocked" id="knocked">
+  <div class="wrap">
+    <div>
+      <h2>Did I just knock on your door?</h2>
+      <p>Then we've already met. That was me: I do every knock personally, and nobody knocks under my name but me. Everything I said at your counter is written here, from the free 15 minutes to the $999 Second Shift Study to the guarantee in its exact legal wording, below.</p>
+      <a class="btn" href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Grab your free 15-minute slot</a>
+      <span class="sub-note">This page isn't going anywhere if you'd rather read first.<span class="needs-phone"> Prefer to talk? Call <a href="tel:__PHONE__" style="font-weight:700;color:var(--accent-deep)">__PHONE__</a>.</span></span>
+    </div>
+    <div>
+      <img src="photos/napa-welcome-sign.jpg" alt="The Welcome to Napa Valley sign beside the vineyards" loading="lazy">
+      <p class="cap">The sign says welcome. I take it literally.</p>
+    </div>
+  </div>
+</div>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <span class="kicker">The process</span>
+    <h2 class="sec">How it works</h2>
+    <p class="lead" style="font-size:16.5px">Your total time in: about ninety minutes, across three calls. Your Shift Sheet is checked over by a competent human in the loop, and it arrives before your walkthrough call, which is scheduled when you book the Study. The quick-start plan asks for ten minutes a day for four days. I do everything else.</p>
+    <div class="steps">
+      <a class="step" href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">
+        <span class="n">Step 1 · Free</span>
+        <h3>The 15-minute mini-audit</h3>
+        <p>A short video call about how your week goes. I show you one real fix for your business on the spot: tool, cost, setup time. If that's all you want, keep it with my blessing.</p>
+        <span class="t">15 min · $0 · book this one →</span>
+      </a>
+      <div class="step">
+        <span class="n">Step 2</span>
+        <h3>The discovery call</h3>
+        <p>A 45-minute interview. I count the hours with you on the Second Shift Ledger: how often each task hits, how long it takes, what your hour is worth. Nothing goes on the list unless you hear the math and say yes out loud.</p>
+        <span class="t">45 min · part of the $999</span>
+      </div>
+      <div class="step">
+        <span class="n">Step 3</span>
+        <h3>Your Shift Sheet</h3>
+        <p>Nine pages, checked over by a competent human in the loop. Every pain point a tool can fix, mapped to a specific tool with its price, setup time, and hours returned, plus a 4-day quick-start plan: ten minutes a day, in a set order.</p>
+        <span class="t">arrives before your walkthrough</span>
+      </div>
+      <div class="step">
+        <span class="n">Step 4</span>
+        <h3>The Shift Sheet Walkthrough</h3>
+        <p>Your Shift Sheet is already in your inbox. We walk it together for 30 minutes, run the money math with your numbers, and flag the install-order traps before you spend a dollar on software.</p>
+        <span class="t">30 min · included</span>
+      </div>
+    </div>
+    <div class="center" style="margin-top:36px">
+      <a class="btn" href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Get one real fix free in 15 minutes</a>
+    </div>
+  </div>
+</section>
+
+<section class="report">
+  <div class="wrap">
+    <div>
+      <span class="kicker">What you get for $999</span>
+      <h2 class="sec">I do the AI shopping for you: current prices, and the reasons behind every pick.</h2>
+      <p class="lead">I'm not paid by any company I recommend. If that ever changes, your report will say so next to that pick, before you buy anything.</p>
+      <ol>
+        <li>Cover page: your business, your date, and the report's primary focus</li>
+        <li>Executive summary: your top pain points, in your own words</li>
+        <li>The effort-vs-impact grid: what to do now, later, and never</li>
+        <li>Quick wins: each pain point matched to the tool that fixes it</li>
+        <li>Every tool's one line of truth: cost, setup time, hours returned</li>
+        <li>The 4-day quick-start plan: ten minutes a day, in a set order</li>
+        <li>The bigger opportunities, honestly parked for later</li>
+        <li>The money math: your hours times your rate, minus tool costs</li>
+        <li>Next steps: two of them, that's all</li>
+      </ol>
+    </div>
+    <div class="paper" aria-label="What a report page looks like">
+      <div class="ph-head">Quick wins · page 4 <small>The Local AI Shop · The Shift Sheet</small></div>
+      <table>
+        <tr><th>The task (your words)</th><th>Tool that fixes it</th><th>Cost/mo</th><th>Hours back/wk</th></tr>
+        <tr><td>"Drowning in the inbox"</td><td>email triage tool</td><td>~$10</td><td>2</td></tr>
+        <tr><td>"Typing the same quote every time"</td><td>quote template tool</td><td>~$25</td><td>1.5</td></tr>
+        <tr><td>"Chasing no-shows by hand"</td><td>reminder automation</td><td>~$20</td><td>1.5</td></tr>
+        <tr><td>"Reviews? When I remember."</td><td>review-request tool</td><td>~$30</td><td>1</td></tr>
+      </table>
+      <p class="sum">Worked example of the money math: 6 hours a week at $75/hour is about $1,950 a month back; the tools that get it cost around $85. Your report runs this with your numbers, the ones you counted and confirmed yourself.</p>
+      <p class="wm">Illustrative page. A fictional business, for layout only. Every real report is built from your discovery call.</p>
+      <a class="sample-link" href="sample-report.html">See a full sample Shift Sheet (fictional business) →</a>
+    </div>
+  </div>
+</section>
+
+<section class="guarantee" id="guarantee">
+  <div class="wrap">
+    <span class="kicker">The part you should read twice</span>
+    <h2 class="sec">The guarantee, in its exact wording.</h2>
+    <div class="gdoc">
+      <span class="gk">Written guarantee · the same wording on my terms page, in writing before you pay</span>
+      <h3>Five hours found, or your $999 comes back. You keep the report either way.</h3>
+      <p class="text">"If, after your 45-minute conversation, we can't document at least five reclaimable hours a week in your business — honest, non-duplicative hours you confirm — you still receive your full Shift Sheet AND we refund the $999."</p>
+      <p class="conds">How we count, and the only conditions: the hours come from time estimates you confirm out loud on your discovery call, itemized per tool in your Shift Sheet, with no task counted twice. Claim window: 30 days from the day your Shift Sheet is delivered. Refunds go to your original payment method; we start the refund ourselves, and how quickly it posts depends on your card issuer.</p>
+      <div class="sig">
+        <div><b>Lucas Vegvary</b>Founder, The Local AI Shop</div>
+        <div>Napa, California · 2026</div>
+      </div>
+    </div>
+    <div class="center" style="margin-top:32px">
+      <a class="btn" href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Get one real fix free in 15 minutes</a>
+      <span class="sub-note needs-phone" style="color:#8d96a1">Questions first? Call <a href="tel:__PHONE__" style="color:#fff">__PHONE__</a>.</span>
+    </div>
+  </div>
+</section>
+
+<section class="prices-sec" id="pricing">
+  <div class="wrap">
+    <span class="kicker">No "book a call to find out"</span>
+    <h2 class="sec">Pricing</h2>
+    <p class="prices-intro">One honest constraint before the numbers: I run every discovery and review call myself, which caps how many Studies I can take in a week. The booking calendar shows exactly what's open. When it's full, it's full.</p>
+    <div class="prices">
+      <div class="price feature">
+        <span class="tag">Start here</span>
+        <h3>The Second Shift Study</h3>
+        <div class="amount">$999 <small>one time</small></div>
+        <div class="twoways">A human-verified assessment and action plan for the work you still do by hand after close. One price, stated up front, and the written guarantee above applies in its exact wording.</div>
+        <ul>
+          <li>45-minute discovery interview</li>
+          <li>The Shift Sheet: your nine-page written report</li>
+          <li>4-day quick-start plan</li>
+          <li>30-minute Shift Sheet Walkthrough, math run live</li>
+          <li>Backed by the written guarantee above</li>
+        </ul>
+        <a class="btn" href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Get one real fix free in 15 minutes</a>
+        <p class="note">The guarantee's floor is five reclaimable hours a week, counted from numbers you confirm out loud, never numbers I hand you. What those hours are worth is your own rate times the fixes you actually put in, and your report runs that math with your numbers, not mine. And if you ever hire me to build anything from the report, the full $999 credits toward it. Every Study starts with the free mini-audit; you never pay before you've met me.</p>
+      </div>
+      <div class="price">
+        <span class="tag">If you want it built for you</span>
+        <h3>The First Shift Build</h3>
+        <div class="amount">$2,900 <small>fixed; your $999 Study credits toward it, so you pay $1,901</small></div>
+        <ul>
+          <li>The three tasks I name at your Walkthrough, installed and configured for you</li>
+          <li>Built in your accounts. You own every login, and every piece has an off switch you control</li>
+          <li>Tested in front of you, then handed to whoever will run it</li>
+          <li>Scoped from your report, never sold before it exists</li>
+          <li><b>Your $999 Study fee credits toward it in full</b></li>
+        </ul>
+        <p class="note">Anything bigger than the first build is custom quoted in writing: one fixed quote, what's included, what's excluded, and how you test that it's done. Two businesses rarely need the same build, so I don't pretend they cost the same. Every tool in the report is something you can set up yourself without hiring me; the report tells you how. This is only for owners who'd rather not.</p>
+      </div>
+      <div class="price">
+        <span class="tag">If you want a partner</span>
+        <h3>AI Concierge</h3>
+        <div class="amount">Scoped to you <small>quoted monthly, in writing</small></div>
+        <ul>
+          <li>Working sessions on your real workflows, on a cadence you and I set in writing</li>
+          <li>Voice-message access between sessions, answered within one business day</li>
+          <li>Built in your accounts. You own every login, and every piece has an off switch you control</li>
+          <li>Capped at five businesses, so when you leave a message, you get a call back</li>
+        </ul>
+        <p class="note">Your seat is scoped and quoted to your workflows, in writing. Cancel any month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="straight">
+  <div class="wrap">
+    <span class="kicker">Fair question</span>
+    <h2 class="sec">Why trust me?</h2>
+    <div class="cols">
+      <div>
+        <h3>What you won't find on this page</h3>
+        <p>No stock testimonials. No star ratings from reviewers who don't exist. No logos of publications that have never heard of me. I'm building this company in person, across Napa, Solano and Sonoma counties, and I'm early: if you book, you'll be one of my first clients, and I'll tell you exactly which number when you ask.</p>
+        <p>That cuts both ways, so here's the deal it buys you: I answer my own phone, I run your calls myself, and I have more riding on your report being good than you do. When my first clients have results, you'll see them here, real names, shared with written permission. Until then, I'd rather show you nothing than make something up.</p>
+      </div>
+      <div>
+        <h3>What holds me accountable instead</h3>
+        <div class="plate" style="margin-bottom:12px"><h4>The refund is the review.</h4><p>The guarantee above isn't marketing; it's the exact text on my terms page, in writing before you pay. If the report is thin, it costs me $999 and the afternoon it takes to say so.</p></div>
+        <div class="plate" style="margin-bottom:12px"><h4>The math happens in front of you.</h4><p>No guesswork: every hour in your report comes from counts you confirmed yourself, out loud, on our discovery call.</p></div>
+        <div class="plate"><h4>I knock on doors.</h4><p>You meet me first, on a video call or in person, before a dollar moves, and you'll see me again: same streets, next month. Harder to disappear than an ad account.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="founder">
+  <div class="wrap">
+    <div class="ph"><img src="photos/lucas.jpg" alt="Lucas Vegvary, founder of The Local AI Shop" onerror="this.remove()"><span class="initials" aria-hidden="true">LV</span></div>
+    <div class="bio">
+      <span class="kicker">Who's behind this</span>
+      <h2 class="sec" style="font-size:28px">Lucas Vegvary, founder.</h2>
+      <p>I live and work in Napa County. My background is sales and technology: years selling internet and Ethernet connectivity, then Windows systems, then coaching. The common thread was sitting across from someone and working out what they actually needed.</p>
+      <p>I started The Local AI Shop because local owners kept getting sold "AI" they didn't need, by people who never asked how they actually work. So that's where the Study starts: how your week actually runs, in your words. Sometimes the right answer is a plain piece of software. Sometimes it's "don't buy that." The report says so either way.</p>
+      <p>When I do recommend a company, I lean toward established, well-reviewed ones. I do the homework with AI research tools under my own rules, starting with how long a company has been around and what its customers say on independent review sites. A second, separate check hunts for red flags like lawsuits, data breaches and billing complaints. That's due diligence with a human in the loop: AI does the searching, and a competent human checks over your report before you see it.</p>
+      <p>Every price in your report is checked on the tool's own pricing page the day the report ships, for the plan that fits a business your size. Next to each pick, you'll see why I chose it and what I passed on.</p>
+      <p style="font-size:14px;color:var(--muted)">If someone shows up claiming to be me, tell me at <a href="mailto:lucas@localaishop.com">lucas@localaishop.com</a><span class="needs-phone"> or <a href="tel:__PHONE__">__PHONE__</a></span>. Nobody knocks under my name but me.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <span class="kicker">Before you book</span>
+    <h2 class="sec" style="margin-bottom:36px">Questions</h2>
+
+    <details class="q">
+      <summary>Is the free 15 minutes a sales call?</summary>
+      <div class="a">It is a working conversation, not a generic demo. I look at how you run things and give you one specific idea you can keep. At the end, if the full Study looks useful, I'll ask whether you want it. The price and guarantee are already printed on this page, and there is no obligation to continue.</div>
+    </details>
+    <details class="q">
+      <summary>We already use ChatGPT. Do we still need this?</summary>
+      <div class="a">Good, you've already tried one tool. The assessment looks at the office-side work around it: email, scheduling, reviews, quotes, follow-up, and the pile that sits and waits for you. In the free 15 minutes, I look at one workflow with you and give you one practical idea to keep.</div>
+    </details>
+    <details class="q">
+      <summary>What if you can't find 5 hours in my business?</summary>
+      <div class="a">You still receive your full Shift Sheet and your walkthrough, and I refund the $999. I count only honest, non-duplicative hours you confirm on your discovery call, and I never pad the numbers to dodge the refund. The full wording and its conditions are in the guarantee above and on my <a href="terms.html">terms page</a>.</div>
+    </details>
+    <details class="q">
+      <summary>When do I get my Shift Sheet?</summary>
+      <div class="a">Before your walkthrough call. The walkthrough is scheduled when you book the Study, and your Shift Sheet lands in your inbox ahead of it, so you can read it first and bring questions.</div>
+    </details>
+    <details class="q">
+      <summary>Aren't we too small for this?</summary>
+      <div class="a">Small is exactly who this is for. I work with owner-run home and trade service businesses across Napa, Solano and Sonoma counties, HVAC, plumbing, electrical, roofing, remodeling, landscaping, cleaning and pest control, roughly 2 to 20 people. Big companies have IT departments; you've got you. Five hours a week back matters more at your size, not less.</div>
+    </details>
+    <details class="q">
+      <summary>Is there anyone you don't work with?</summary>
+      <div class="a">Yes, and I'd rather say it here than on the fourth call. I don't take medical, dental, chiropractic, veterinary or therapy practices yet. Those carry patient records, and I don't have the compliance lane for them. It would be wrong to pretend otherwise. If that's your business, I'll tell you on the first call, not the fourth.</div>
+    </details>
+    <details class="q">
+      <summary>I don't really trust AI. Why should I do this?</summary>
+      <div class="a">If AI has felt like it wasn't built for a business like yours, that's not you being behind. It has mostly been sold in a language from another planet, by people who have never run a shop. Healthy instinct: a lot of what's out there is hype. The job is filtering that noise down to the three-to-seven tools that are boring, proven, and worth your money. A lot of what I recommend is plain software with no AI in it at all. Whatever fixes the problem. Nothing experimental goes near your business. The AI is the wrench, not the job. You're not buying artificial intelligence. You're buying your Tuesday nights back.</div>
+    </details>
+    <details class="q">
+      <summary>Will AI end up running my business?</summary>
+      <div class="a">No. You will. My job is to take the repeat work off your plate, not to take you out of the loop. A reminder text can go out without you, but which jobs you take and what you promise a customer stay your call. Anything I build goes in your accounts: you own every login, and every piece has an off switch you control. Keeping a human in the loop is the responsible, ethical way to work with AI. Same goes for me: AI speeds up my research, and every recommendation in your report is mine to answer for.</div>
+    </details>
+    <details class="q">
+      <summary>Do you record the calls? What happens to my information?</summary>
+      <div class="a">The 45-minute discovery call is recorded, but only if you say yes. I ask out loud at the start. Here's exactly what happens to it: the recording is transcribed and analyzed with AI software to draft your report (that software receives your call content only to do that job), and a human reviews every page before it ships. The recording is deleted 30 days after your report is delivered. The working transcript is deleted after 90 days. Your final report is deleted after 12 months, unless you ask me to keep it longer. Want anything gone sooner? One email to <a href="mailto:lucas@localaishop.com">lucas@localaishop.com</a>, any time. Nothing you say is sold, and nothing trains AI models unless you separately choose to allow a de-identified version for my internal training (a completely optional checkbox; saying no changes nothing). Full details in my <a href="privacy.html">privacy policy</a>.</div>
+    </details>
+    <details class="q">
+      <summary>Which tools do you push? Are you selling software?</summary>
+      <div class="a">I'm not a software company, and no tool pays my bills; the Study fee is my product. I favor boring, proven, off-the-shelf tools you could buy on your own tomorrow, including plain software with no AI when it fits better. Every price in your report is checked on the tool's own pricing page the day the report ships.</div>
+    </details>
+    <details class="q">
+      <summary>Why knock on doors? Nobody does that anymore.</summary>
+      <div class="a">A knock is unusual now, which is part of why I use it. The businesses I serve are often easier to understand by walking the street than by studying an ad dashboard. The door is one way I say hello; you might also get a short researched email, a referral from someone you trust, or meet me at a community event. Knocking keeps the introduction local and gives you a real person to hold accountable.</div>
+    </details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Leave the first call with one real fix. Free.</h2>
+    <p>Your business, not a demo. Worst case, you learn two tools you'd never heard of. Best case, you get your evenings back.</p>
+    <a class="btn" href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Get one real fix free in 15 minutes</a>
+    <span class="sub-note needs-phone" style="color:#8d96a1">Or call <a class="tel" href="tel:__PHONE__">__PHONE__</a>. It rings through to me.</span>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Lucas Vegvary · The Local AI Shop</b><br>
+      Napa, California<span class="needs-phone"> · <a href="tel:__PHONE__">__PHONE__</a></span> · <a href="mailto:lucas@localaishop.com">lucas@localaishop.com</a><br>
+      Mail: 301 Georgia Street, Vallejo, CA 94590<br>
+      The Local AI Shop is operated by My Custom Sleep Journey LLC · Napa County, California<br>
+      Charges appear on your card statement as MCSJ LLC.
+    </div>
+    <div class="legal">
+      Appointment texts are sent only with your consent, only about your booking. Reply STOP anytime to opt out, HELP for help. Discovery calls are recorded only with your spoken permission; recordings exist to build your report, are never sold, and are deleted 30 days after your report is delivered (working transcripts after 90 days, final reports after 12 months) or on request. Details: <a href="privacy.html">privacy policy &amp; SMS terms</a> · <a href="terms.html">terms, guarantee &amp; refund policy</a>. Guarantee terms as written above and on the terms page.<br><br>
+      Photography: <a href="https://commons.wikimedia.org/wiki/File:Ballooning_In_Napa_(129976155).jpeg" rel="noopener">hot-air balloons over Napa</a> by Ilya Grigorik (<a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a>, resized) · <a href="https://commons.wikimedia.org/wiki/File:Welcome_to_Napa_Valley.jpg" rel="noopener">Welcome to Napa Valley sign</a> by DestinationFearFan (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>, resized) · <a href="https://commons.wikimedia.org/wiki/File:Atlas_Peak_vineyards_Napa_Valley.jpg" rel="noopener">Napa Valley vineyards</a> by Deb Harkness (<a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener">CC BY 2.0</a>, toned). Real photographs; nothing on this page is AI-generated imagery.
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Launch guard: until ./fill.sh fills the two tokens, phone lines stay hidden and booking links open an email instead. Inert once filled. */
+(function(){
+  var P='__PH'+'ONE__', B='__BOOKING'+'_URL__';
+  if(document.body.innerHTML.indexOf(P)>-1){document.querySelectorAll('.needs-phone').forEach(function(e){e.style.display='none';});}
+  document.querySelectorAll('a[href="'+B+'"]').forEach(function(a){a.setAttribute('href','mailto:lucas@localaishop.com?subject=Booking%20request');});
+})();
+</script>
+<script>
+/* Phone menu: close the panel after a link is tapped, so it does not sit open over the section you jumped to. */
+document.querySelectorAll('.mnav .panel a').forEach(function(a){a.addEventListener('click',function(){var d=a.closest('details');if(d){d.removeAttribute('open');}});});
+</script>
+</body>
+</html>
