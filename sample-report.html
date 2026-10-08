@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Sample Shift Sheet (fictional): The Local AI Shop</title>
+<title>Sample report (fictional business): The Local AI Shop</title>
 <meta name="robots" content="noindex, follow">
-<meta name="description" content="A sample Shift Sheet for a fictional business, for illustration only.">
+<meta name="description" content="A sample report for a fictional business with made-up hours and rates, for illustration only.">
+<meta name="viewport" content="width=1120">
 <style>
   :root{
     --accent:#F06000;
@@ -14,24 +15,10 @@
     --line:#e3e6ea;
     --muted:#5c6570;
     --good:#0d8a4f;
-    --watermark:"SAMPLE, FICTIONAL BUSINESS";
+    --watermark:"SAMPLE: fictional business, made-up hours and rates";
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:#d8dbe0;padding-top:38px}
-  .screen-banner{
-    position:fixed;top:0;left:0;right:0;z-index:99;
-    background:var(--ink);color:#fff;text-align:center;
-    font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-    padding:9px 12px;
-  }
-  .screen-banner b{color:var(--accent);font-weight:800}
-  .sample-mark{
-    position:absolute;top:.32in;right:.8in;z-index:6;
-    font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-    color:#c94f00;background:#fdeee2;border:1px solid #f0b98e;
-    border-radius:4px;padding:3px 10px;
-  }
-  .title-slide .sample-mark{color:#ffb27a;background:rgba(240,96,0,.14);border-color:rgba(240,96,0,.55)}
+  body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:#d8dbe0}
   .slide{
     width:11in;height:8.5in;background:var(--paper);
     margin:24px auto;padding:.65in .8in;position:relative;
@@ -39,8 +26,7 @@
     display:flex;flex-direction:column;
   }
   @media print{
-    body{background:#fff;padding-top:0}
-    .screen-banner{display:none}
+    body{background:#fff}
     .slide{margin:0;box-shadow:none;page-break-after:always}
     @page{size:letter landscape;margin:0}
   }
@@ -65,13 +51,10 @@
   .stat small{font-size:12px;font-weight:600;color:var(--muted);display:block;margin-top:4px;letter-spacing:.04em}
   .pill{display:inline-block;background:var(--accent);color:#fff;border-radius:99px;padding:3px 12px;font-size:11px;font-weight:700;letter-spacing:.05em}
   .arrow{color:var(--accent);font-weight:800;padding:0 8px}
+  .qw td.arrow{padding:9px 8px 3px}
   table{width:100%;border-collapse:collapse;font-size:12.5px}
   th{text-align:left;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--ink);padding:6px 8px}
   td{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
-  tr.pick td{border-bottom:0;padding-bottom:3px}
-  tr.why td{padding:0 8px 9px;font-size:10.5px;line-height:1.45;color:var(--muted)}
-  tr.why span{display:block;width:0;min-width:100%}
-  tr.why b{font-weight:700}
 
   /* slide 1 */
   .title-slide{justify-content:center;background:var(--ink);color:#fff}
@@ -93,6 +76,7 @@
   .tool-card{border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:8px;padding:12px 14px;margin-bottom:10px;background:#fff}
   .tool-card .row{display:flex;justify-content:space-between;align-items:baseline}
   .tool-card .facts{display:flex;gap:26px;margin-top:8px;font-size:12px}
+  .tool-card .facts .hb{white-space:nowrap}
   .tool-card .facts b{display:block;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
   /* day plan */
@@ -105,16 +89,22 @@
   .roi-line .big{font-size:26px;font-weight:800}
   .guarantee{border:2px solid var(--good);border-radius:10px;padding:12px 16px;font-size:12.5px;color:var(--good);font-weight:600}
 
+  /* slide 4 per-pick line */
+  .qw td{border-bottom:0;padding-bottom:3px}
+  .qw td.why{border-bottom:1px solid var(--line);padding:0 8px 9px;font-size:10.5px;line-height:1.45;color:var(--muted)}
+  .qw td.why span{display:block;width:0;min-width:100%}
+  .qw td.why b{font-weight:700}
+
   /* watermark slot */
   .slide::after{
     content:var(--watermark);
     position:absolute;top:50%;left:50%;
     transform:translate(-50%,-50%) rotate(-24deg);
     font-size:34px;font-weight:800;letter-spacing:.06em;
-    color:rgba(17,20,24,.11);white-space:nowrap;
+    color:rgba(17,20,24,.08);white-space:nowrap;
     pointer-events:none;z-index:5;
   }
-  .title-slide::after{color:rgba(255,255,255,.10)}
+  .title-slide::after{color:rgba(255,255,255,.07)}
 
   /* estimate label */
   .estimate-label{
@@ -122,223 +112,216 @@
     color:var(--muted);border:1px solid var(--line);border-radius:6px;
     padding:7px 10px;margin-top:12px;line-height:1.5;
   }
+
+  body{padding-top:38px}
+  .screen-banner{
+    position:fixed;top:0;left:0;right:0;z-index:99;
+    background:var(--ink);color:#fff;text-align:center;
+    font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    padding:9px 12px;
+  }
+  .screen-banner b{color:var(--accent);font-weight:800}
+  .screen-banner a{color:#fff;font-weight:700;text-transform:none;letter-spacing:.02em;text-underline-offset:3px}
+  .sample-mark{
+    position:absolute;top:.32in;right:.8in;z-index:6;
+    font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:#c94f00;background:#fdeee2;border:1px solid #f0b98e;
+    border-radius:4px;padding:3px 10px;
+  }
+  .title-slide .sample-mark{color:#ffb27a;background:rgba(240,96,0,.14);border-color:rgba(240,96,0,.55)}
+  @media print{
+    body{padding-top:0}
+    .screen-banner{display:none}
+  }
 </style>
+<script src="carry.js" defer></script>
 </head>
 <body>
 
-<div class="screen-banner"><b>Sample Shift Sheet</b> · fictional business · for illustration only</div>
+<div class="screen-banner"><b>Sample report</b> · fictional business, made-up hours and rates · <a data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a></div>
 
 <section class="slide title-slide">
-  <div class="sample-mark">Sample Shift Sheet · fictional business · for illustration only</div>
+  <div class="sample-mark">Sample report · fictional business, made-up hours and rates · for illustration only</div>
   <div class="logo">The Local AI Shop<span>.</span></div>
   <div class="kicker">The Second Shift Study · Your Shift Sheet</div>
-  <h1>Prepared for<br>Carneros Plumbing &amp; Heating</h1>
+  <h1>Prepared for<br>Riverbend Auto Repair</h1>
   <p style="margin-top:14px;font-size:14px;color:#9aa3ad">A human-verified assessment and action plan for the work you still do by hand after close.</p>
   <div class="meta">
-    <div><b>Date</b>August 21, 2026</div>
-    <div><b>Business type</b>Plumbing and heating contractor, six people, Napa</div>
+    <div><b>Date</b>October 6, 2026</div>
+    <div><b>Business type</b>Independent auto repair, Napa</div>
     <div><b>Primary focus</b>Efficiency</div>
     <div><b>Prepared by</b>Lucas Vegvary</div>
   </div>
 </section>
 
 <section class="slide">
-  <div class="sample-mark">Sample Shift Sheet · fictional business · for illustration only</div>
+  <div class="sample-mark">Sample report · fictional business, made-up hours and rates · for illustration only</div>
   <div class="kicker">01 · Executive Summary</div>
-  <h2>Where your time is going: and how you get it back</h2>
+  <h2>Where your time is going, and how you get it back</h2>
   <div class="bar"></div>
   <div class="grid2" style="margin-bottom:16px">
     <div class="card">
       <h3>Main pain points</h3>
-      <p style="margin-top:8px">1. "The quotes get typed at the kitchen table after the kids go down. Four nights a week, easy, and I'm still finishing them Sunday."</p>
-      <p style="margin-top:6px">2. "Kim spends half of Friday typing invoices off the job tickets, and then she spends Monday chasing the people who didn't pay them."</p>
+      <p style="margin-top:8px">1. "The actual estimate, looking up the part numbers, pricing it, figuring the labor time out of the guide, writing it up so it's legible, that happens at my kitchen table after dinner."</p>
+      <p style="margin-top:6px">2. "Every ticket that closes, the pink copy goes in the box, and somebody has to type it into QuickBooks as an invoice... And that somebody is me, Saturday morning."</p>
     </div>
     <div class="card">
       <h3>Main outcome</h3>
-      <p style="margin-top:8px">Your evenings come back. Quotes get written and sent from the truck instead of the kitchen table, invoices go out the minute a job closes, and every call that rings out while you are under a sink gets a text back inside a minute, so the callback list stops waiting for eight at night.</p>
+      <p style="margin-top:8px">Your nights get shorter first: for the suppliers that connect, the parts hunting becomes one search inside Tekmetric, and the Saturday keying goes away. Once it is running, that is up to 5.1 hours a week of your own time back, plus 1.5 of Tony's.</p>
     </div>
   </div>
   <div class="grid3">
-    <div class="card"><div class="stat">10.0<small>hours reclaimed each week</small></div></div>
-    <div class="card"><div class="stat">4<small>tools prescribed: all off-the-shelf</small></div></div>
+    <div class="card"><div class="stat">6.6<small>reclaimable hours a week, counted from what you told me</small></div></div>
+    <div class="card"><div class="stat">2<small>off-the-shelf tools picked for you</small></div></div>
     <div class="card"><div class="stat accent">Efficiency<small>primary focus of this report</small></div></div>
   </div>
-  <p class="muted" style="margin-top:16px">Every recommendation in this report pulls at least one of three levers: <b>Effectiveness</b> (makes you money) · <b>Efficiency</b> (saves you time) · <b>Quality</b> (raises the quality of your product or service).</p>
-  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, for illustration only</span><span>Carneros Plumbing &amp; Heating · 2 / 9</span></footer>
+  <p class="muted" style="margin-top:16px">Every pick here does at least one of three things: makes you money (<b>Effectiveness</b>), saves you time (<b>Efficiency</b>) or makes the work better (<b>Quality</b>).</p>
+  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, made-up hours and rates</span><span>Riverbend Auto Repair · 2 / 9</span></footer>
 </section>
 
 <section class="slide">
-  <div class="sample-mark">Sample Shift Sheet · fictional business · for illustration only</div>
-  <div class="kicker">02 · Priority Matrix</div>
-  <h2>Effort vs. impact: why I start where I start</h2>
+  <div class="sample-mark">Sample report · fictional business, made-up hours and rates · for illustration only</div>
+  <div class="kicker">02 · What To Do First</div>
+  <h2>Effort vs. impact: why I put these first</h2>
   <div class="bar"></div>
   <div class="axis">↑ high impact</div>
   <div class="matrix">
     <div class="q win">
       <span class="tag">Low effort · High impact</span>
       <h3 class="accent">Quick wins: this report</h3>
-      <p>Four sign-ups, not ten. One field service app takes the quoting, the dispatching, and the invoicing off the kitchen table. Three small tools catch the calls you miss, the receipts in the truck door, and the shop inbox.</p>
+      <p>First come four ten-minute steps, then the real work: one switch day you pick in a slow week, with Tekmetric's onboarding manager setting it up with you. The system you tried was $400-something a month on a year contract. Tekmetric's Start plan is $199. Its pricing page says month to month, but its terms renew plans for a year unless your order form says otherwise. On Day 1, get month-to-month in writing. Accounting Link rides on Tekmetric and carries closed tickets into QuickBooks.</p>
     </div>
     <div class="q">
       <span class="tag">High effort · High impact</span>
       <h3>Major projects: what comes after</h3>
-      <p>Setting one cutover date and retiring the paper quote pad for good, getting your price book out of your head and onto every phone, and the maintenance agreements you keep meaning to sell.</p>
+      <p>The drawer of estimates nobody called back, the no-shows, and getting what Brenda knows out of her head and onto paper.</p>
     </div>
     <div class="q">
       <span class="tag">Low effort · Low impact</span>
       <h3>Fill-ins</h3>
-      <p>Nice-to-haves. Do them when idle: never first.</p>
+      <p>Nice-to-haves for slow weeks, never first. Nothing in this report is in this box.</p>
     </div>
     <div class="q">
       <span class="tag">High effort · Low impact</span>
       <h3>Avoid</h3>
-      <p>Time sinks dressed up as innovation. I keep you out of this quadrant.</p>
+      <p>Time sinks dressed up as innovation. Nothing in this report is in this box.</p>
     </div>
   </div>
   <div class="axis">effort →</div>
-  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, for illustration only</span><span>Carneros Plumbing &amp; Heating · 3 / 9</span></footer>
+  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, made-up hours and rates</span><span>Riverbend Auto Repair · 3 / 9</span></footer>
 </section>
 
 <section class="slide">
-  <div class="sample-mark">Sample Shift Sheet · fictional business · for illustration only</div>
+  <div class="sample-mark">Sample report · fictional business, made-up hours and rates · for illustration only</div>
   <div class="kicker">03 · Quick Wins</div>
-  <h2>Your pain points → the tool that fixes each one</h2>
+  <h2>Your pain points → the tool I picked for each one</h2>
   <div class="bar"></div>
-  <table>
-    <tr><th>Pain point (in your words)</th><th></th><th>Prescribed tool</th><th>Hours back / wk</th></tr>
-    <tr class="pick"><td>"The quotes get typed at the kitchen table after the kids go down." Four nights a week.</td><td class="arrow">→</td><td><b>Field service app</b></td><td>2.5</td></tr>
-    <tr class="why"><td colspan="4"><span><b>Why this one:</b> you write and send the quote from the truck, and the same job later becomes the invoice, so the job gets typed once · <b>What I passed on:</b> a quote-only app (it fixes the quotes but leaves the invoicing and the scheduling texts as they are) · <b>Price checked on</b> August 21, 2026 · <b>Paid link:</b> no</span></td></tr>
-    <tr class="pick"><td>"Half of Friday typing invoices, and Monday chasing the ones nobody paid."</td><td class="arrow">→</td><td><b>Field service app</b></td><td>2.0</td></tr>
-    <tr class="why"><td colspan="4"><span><b>Why this one:</b> the invoice goes out from the finished job with a card payment option, so Kim stops typing tickets on Friday · <b>What I passed on:</b> invoicing software on its own (Kim would still copy every job ticket into it by hand) · <b>Price checked on</b> August 21, 2026 · <b>Paid link:</b> no</span></td></tr>
-    <tr class="pick"><td>"Scheduling is me, Kim, and four guys texting all day about who is going where."</td><td class="arrow">→</td><td><b>Field service app</b></td><td>2.5</td></tr>
-    <tr class="why"><td colspan="4"><span><b>Why this one:</b> all six of you see one schedule on your phones, and the price goes by how many of you use it, so it fits your crew · <b>What I passed on:</b> a shared calendar (it shows the time, not the job or the customer); the big platforms built for large fleets (more than a six-person crew needs) · <b>Price checked on</b> August 21, 2026 · <b>Paid link:</b> no</span></td></tr>
-    <tr class="pick"><td>"If I'm under a sink that call rings out, and I call them back at eight at night."</td><td class="arrow">→</td><td><b>Missed-call text-back service</b></td><td>1.5</td></tr>
-    <tr class="why"><td colspan="4"><span><b>Why this one:</b> a missed call gets a text back inside a minute, so the caller hears from you while you are still under the sink · <b>What I passed on:</b> an answering service (a person takes a message, but the callback still waits for you) · <b>Price checked on</b> August 21, 2026 · <b>Paid link:</b> no</span></td></tr>
-    <tr class="pick"><td>"Receipts live in the truck door until somebody empties it into a shoebox."</td><td class="arrow">→</td><td><b>Receipt capture app</b></td><td>1.0</td></tr>
-    <tr class="why"><td colspan="4"><span><b>Why this one:</b> you snap the receipt at the supply house counter and it files itself into your bookkeeping, so nothing rides in the truck door · <b>What I passed on:</b> a scanner at the shop (the receipt still rides in the truck door until someone gets back) · <b>Price checked on</b> August 21, 2026 · <b>Paid link:</b> no</span></td></tr>
-    <tr class="pick"><td>"The shop inbox is where a job request goes to sit for a week."</td><td class="arrow">→</td><td><b>Email triage tool</b></td><td>0.5</td></tr>
-    <tr class="why"><td colspan="4"><span><b>Why this one:</b> it sorts the one shop inbox you already have, takes about 15 minutes to set up, and keeps customer requests on top · <b>What I passed on:</b> a shared help desk (built for a support team, far more than one shop inbox needs) · <b>Price checked on</b> August 21, 2026 · <b>Paid link:</b> no</span></td></tr>
+  <table class="qw">
+    <tr><th>Pain point (in your words)</th><th></th><th>The tool I picked</th><th>Hours back / wk</th></tr>
+    <tr><td>Pricing estimates at the kitchen table, four nights</td><td class="arrow">→</td><td><b>Tekmetric</b></td><td>2.6</td></tr>
+    <tr><td class="why" colspan="4"><span><b>Why this one:</b> Parts ordering is built into the $199 Start plan, so your connected suppliers become one search: up to the 40 minutes a night that you said go to parts · <b>What I passed on:</b> Grow at $349 (adds a labor guide; you already pay for one) · <b>Price checked on</b> October 6, 2026 · <b>Paid link:</b> no</span></td></tr>
+    <tr><td>Keying the pink copies into QuickBooks on Saturday</td><td class="arrow">→</td><td><b>Accounting Link</b></td><td>2.5</td></tr>
+    <tr><td class="why" colspan="4"><span><b>Why this one:</b> It posts every closed repair order and payment into QuickBooks for you, so the keying and the pink-copy hunt both go · <b>What I passed on:</b> QuickBooks invoicing alone (you would still type every ticket) · <b>Price checked on</b> October 6, 2026, no price shown · <b>Paid link:</b> no</span></td></tr>
+    <tr><td>Tony on hold with suppliers: the half that is waiting</td><td class="arrow">→</td><td><b>Tekmetric</b></td><td>1.5</td></tr>
+    <tr><td class="why" colspan="4"><span><b>Why this one:</b> The same Start-plan parts ordering puts your connected suppliers' parts and prices on one screen, the waiting half you told me to count · <b>What I passed on:</b> Scale at $439 (its two-way texting does not cut supplier hold time) · <b>Price checked on</b> October 6, 2026 · <b>Paid link:</b> no</span></td></tr>
   </table>
-  <p class="muted" style="margin-top:auto">Total: <b class="accent">10.0 hours/week</b> · combined tool cost ≈ <b>$280 to $515/month</b>, four subscriptions. In a real Shift Sheet every pick, and everything I passed on, is named, and each pick is priced off its live pricing page. Here the category stands in, so verify any price on the day you sign up.</p>
-  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, for illustration only</span><span>Carneros Plumbing &amp; Heating · 4 / 9</span></footer>
+  <p class="muted" style="margin-top:auto">Total: <b class="accent">6.6 hours/week</b> · combined tool cost ≈ <b>$199/month</b>, plus Accounting Link (price and setup fee not published: verify on the day you sign up)</p>
+  <p class="muted not-counted" style="margin-top:6px;font-size:11px;line-height:1.45">Not counted yet: Brenda's "is my car ready" calls, her reminder calls and your Sunday email. A tool takes only part of each, and I need you to tell me how much.</p>
+  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, made-up hours and rates</span><span>Riverbend Auto Repair · 4 / 9</span></footer>
 </section>
 
 <section class="slide">
-  <div class="sample-mark">Sample Shift Sheet · fictional business · for illustration only</div>
-  <div class="kicker">04 · Recommended Solutions</div>
-  <h2>Each tool, on one line of truth</h2>
+  <div class="sample-mark">Sample report · fictional business, made-up hours and rates · for illustration only</div>
+  <div class="kicker">04 · The Tools I Picked</div>
+  <h2>Each tool I picked, at a glance</h2>
   <div class="bar"></div>
 
   <div class="tool-card">
-    <div class="row"><h3>Field service app</h3><span class="pill">Efficiency</span></div>
-    <p class="muted" style="margin-top:4px">Solves: the kitchen table quoting, the Friday invoicing and the Monday chasing, and the all day text thread about who is going where. One app holds the schedule, the quote, the invoice, and the card payment for all six of you.</p>
+    <div class="row"><h3>Tekmetric, Start plan</h3><span class="pill">Efficiency</span></div>
+    <p class="muted" style="margin-top:4px">Solves: Estimates priced at the kitchen table; Tony on hold with suppliers</p>
     <div class="facts">
-      <div><b>Cost</b>~$200 to $350/mo. Verify on the day you sign up.</div>
-      <div><b>Setup time</b>1 to 2 weeks</div>
-      <div><b>Saves you</b>7.0 hrs/wk</div>
-      <div><b>First step</b>Book two demos this week.</div>
+      <div><b>Cost</b>$199/mo</div>
+      <div><b>Setup time</b>A switch day you pick; onboarding manager included</div>
+      <div class="hb"><b>Hours back</b>4.1 hrs/wk</div>
+      <div><b>First step</b>Book the free demo (there is no trial) and have them show your own suppliers inside parts ordering.</div>
     </div>
   </div>
 
   <div class="tool-card">
-    <div class="row"><h3>Missed-call text-back service</h3><span class="pill">Efficiency</span></div>
-    <p class="muted" style="margin-top:4px">Solves: the calls that ring out while you are on a job. A missed call gets an automatic text back inside a minute and the reply lands in one thread, so the caller hears from you before you are off your knees.</p>
+    <div class="row"><h3>Accounting Link (Tekmetric add-on by The Back Office)</h3><span class="pill">Efficiency</span></div>
+    <p class="muted" style="margin-top:4px">Solves: Keying closed tickets into QuickBooks every Saturday</p>
     <div class="facts">
-      <div><b>Cost</b>~$50 to $100/mo. Verify on the day you sign up.</div>
-      <div><b>Setup time</b>About 30 minutes</div>
-      <div><b>Saves you</b>1.5 hrs/wk</div>
-      <div><b>First step</b>Forward the shop line, then call it yourself.</div>
+      <div><b>Cost</b>verify on the day you sign up (a setup fee applies)</div>
+      <div><b>Setup time</b>One setup call with The Back Office to map your QuickBooks accounts</div>
+      <div class="hb"><b>Hours back</b>2.5 hrs/wk</div>
+      <div><b>First step</b>Ask at the Tekmetric demo what Accounting Link and its setup fee cost, and put Denise on its setup call.</div>
     </div>
   </div>
 
-  <div class="tool-card">
-    <div class="row"><h3>Receipt capture app</h3><span class="pill">Efficiency</span></div>
-    <p class="muted" style="margin-top:4px">Solves: the receipts in the truck door and the shoebox on your desk. Photograph the receipt at the supply house counter and it lands coded in your bookkeeping instead of in a pile.</p>
-    <div class="facts">
-      <div><b>Cost</b>~$20 to $40/mo. Verify on the day you sign up.</div>
-      <div><b>Setup time</b>About 20 minutes</div>
-      <div><b>Saves you</b>1.0 hrs/wk</div>
-      <div><b>First step</b>Install it on your phone and on Kim's.</div>
-    </div>
-  </div>
-
-  <div class="tool-card">
-    <div class="row"><h3>Email triage tool</h3><span class="pill">Efficiency</span></div>
-    <p class="muted" style="margin-top:4px">Solves: the shop inbox where a job request sits for a week under supplier flyers. It learns what matters, parks the noise in one folder to skim later, and leaves customers on top.</p>
-    <div class="facts">
-      <div><b>Cost</b>~$10 to $25/mo. Verify on the day you sign up.</div>
-      <div><b>Setup time</b>About 15 minutes</div>
-      <div><b>Saves you</b>0.5 hrs/wk</div>
-      <div><b>First step</b>Start the free trial on the shop inbox.</div>
-    </div>
-  </div>
-
-  <p class="muted" style="margin-top:auto;font-size:11px">Sample report: each cost above is a published range for the tool category, not a quote for a named product. Verify any price on the day you sign up. Levers: Effectiveness = makes money · Efficiency = saves time · Quality = better product/service.</p>
-  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, for illustration only</span><span>Carneros Plumbing &amp; Heating · 5 / 9</span></footer>
+  <p class="muted" style="margin-top:auto;font-size:11px">I checked each price on the tool's own pricing page on October 6, 2026, except any cost marked "verify on the day you sign up". The label on each tool: Effectiveness = makes you money · Efficiency = saves you time · Quality = makes the work better.</p>
+  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, made-up hours and rates</span><span>Riverbend Auto Repair · 5 / 9</span></footer>
 </section>
 
 <section class="slide">
-  <div class="sample-mark">Sample Shift Sheet · fictional business · for illustration only</div>
+  <div class="sample-mark">Sample report · fictional business, made-up hours and rates · for illustration only</div>
   <div class="kicker">05 · 4-Day Quick-Start Plan</div>
-  <h2>Ten minutes a day. No freezing. No overwhelm.</h2>
+  <h2>Ten minutes a day, one step at a time.</h2>
   <div class="bar"></div>
   <div class="grid4" style="flex:1">
-    <div class="card day"><span class="d">Day 1</span><h3>Book two field service demos</h3><p class="muted">Pick two apps built for trades and book both. In the notes, ask what six seats cost all in, whether it texts customers both ways, and whether it pushes invoices to your bookkeeping.</p><p class="t" style="margin-top:10px">≈ 10 min</p></div>
-    <div class="card day"><span class="d">Day 2</span><h3>Switch on missed-call text-back</h3><p class="muted">Point the shop line at it, then call the shop from the truck to watch the text arrive. This one can start working the same afternoon.</p><p class="t" style="margin-top:10px">≈ 10 min</p></div>
-    <div class="card day"><span class="d">Day 3</span><h3>Put the receipt app on two phones</h3><p class="muted">Yours and Kim's. Photograph one supply house receipt at the counter and let it file itself. Then stop emptying the truck door into a shoebox.</p><p class="t" style="margin-top:10px">≈ 10 min</p></div>
-    <div class="card day"><span class="d">Day 4</span><h3>Start the inbox trial</h3><p class="muted">Connect the shop inbox and then leave it alone for a week. Do not sort anything by hand while it is still learning what matters.</p><p class="t" style="margin-top:10px">≈ 10 min</p></div>
+    <div class="card day"><span class="d">Day 1</span><h3>Book the Tekmetric demo</h3><p class="muted">There is no free trial, so the demo is your look. Ask to see only the screens you would use: estimates and parts ordering with your own suppliers, and the tech side on a phone (not a tablet). Then ask what Accounting Link and its setup fee cost, and get month-to-month in writing.</p><p class="t" style="margin-top:10px">≈ 10 min</p></div>
+    <div class="card day"><span class="d">Day 2</span><h3>List your parts suppliers</h3><p class="muted">Write down the two or three parts houses you price from and which logins they need, so onboarding can connect them.</p><p class="t" style="margin-top:10px">≈ 10 min</p></div>
+    <div class="card day"><span class="d">Day 3</span><h3>Call Denise</h3><p class="muted">Tell her Accounting Link would post your closed tickets into QuickBooks, and ask her to sit in on its setup call.</p><p class="t" style="margin-top:10px">≈ 10 min</p></div>
+    <div class="card day"><span class="d">Day 4</span><h3>Pick your switch day</h3><p class="muted">Choose a day in a slow week. From that day every ticket and every appointment goes into Tekmetric: it becomes your one appointment book, and the paper book and the carbonless pads retire.</p><p class="t" style="margin-top:10px">≈ 10 min</p></div>
   </div>
-  <p class="muted" style="margin-top:14px">Do only this, and by Thursday, August 27 the text-back, the receipt app, and the inbox tool are all running: 3.0 of the 10.0 hours, in week one. The field service app is a migration, not a sign-up, so its 7.0 hours arrive after the cutover date you set with the vendor, not this week.</p>
-  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, for illustration only</span><span>Carneros Plumbing &amp; Heating · 6 / 9</span></footer>
+  <p class="muted" style="margin-top:14px">Do only this and by Saturday, October 10, your demo is booked, your suppliers are listed, Denise is in, and your switch day is picked. Tekmetric is a switch from paper, not a sign-up, so its 4.1 hours and Accounting Link's 2.5 hours land after the switch day you pick on Day 4, not in week one.</p>
+  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, made-up hours and rates</span><span>Riverbend Auto Repair · 6 / 9</span></footer>
 </section>
 
 <section class="slide">
-  <div class="sample-mark">Sample Shift Sheet · fictional business · for illustration only</div>
+  <div class="sample-mark">Sample report · fictional business, made-up hours and rates · for illustration only</div>
   <div class="kicker">06 · After the Quick Wins</div>
   <h2>The bigger opportunities I found (for when you're ready)</h2>
   <div class="bar"></div>
   <table>
     <tr><th>Opportunity</th><th>What it would do</th><th>Why it's not a quick win</th></tr>
-    <tr><td><b>The cutover, done once</b></td><td>Every job, quote, invoice, and appointment sits in one place the whole crew can see from a phone, so nobody texts four people to find out where a truck went.</td><td>Buying the app is the easy part. This is a data move and a training week, and running the paper pad alongside a screen is what kills these.</td></tr>
-    <tr><td><b>Your price book, out of your head</b></td><td>Any tech quotes a standard job from the truck at your prices, not their guess, so the quote stops waiting for your evening.</td><td>Nobody can buy this for you. It takes sitting down and writing your real prices for the twenty jobs you do most.</td></tr>
-    <tr><td><b>Maintenance agreements you keep meaning to sell</b></td><td>Steady, booked-ahead work from customers you already have, instead of waiting on the next emergency call.</td><td>This is an offer and a follow-up rhythm, not a purchase. It only works once the customer list is clean and lives in one place.</td></tr>
+    <tr><td><b>The drawer of estimates</b></td><td>A short monthly list of the estimates and declined work worth one more call, pulled from Tekmetric's declined-job history instead of a drawer.</td><td>You said the drawer holds hundreds, going back years. Sorting what is worth a call is a project, and it needs your tickets in Tekmetric first.</td></tr>
+    <tr><td><b>No-shows</b></td><td>A reminder for each appointment, priced against what an empty bay costs you.</td><td>Nobody has priced a no-show yet, and Tekmetric's own reminders cost more than Brenda's calls do. Once Denise gives me your average ticket, I can tell you if a reminder pays.</td></tr>
+    <tr><td><b>Brenda's playbook</b></td><td>What Brenda knows, written down, so the counter still runs on a day she is out.</td><td>You said it is all in her head. Getting it out takes a few sittings with her.</td></tr>
   </table>
-  <p class="muted" style="margin-top:14px">Review requests came up on the call: you told me they go out when you remember, which is almost never. They didn't make your top picks this time. Ask me about them on your Walkthrough.</p>
-  <p class="muted" style="margin-top:auto">These sit in the top-right of the matrix: high impact, higher effort. Custom builds, knowledge systems, and dedicated workflows rather than sign-up-and-go tools. I walk through them with you on your Shift Sheet Walkthrough.</p>
-  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, for illustration only</span><span>Carneros Plumbing &amp; Heating · 7 / 9</span></footer>
+  <p class="muted" style="margin-top:14px">Your Google reviews came up on the call. Review response and review generation are not part of this study and are not priced here.</p>
+  <p class="muted" style="margin-top:auto">These sit in the Major projects box on page 3: worth real money or real time, but each one needs a number from you or some groundwork first, so none of them is in your hours. I'll take you through them on your Shift Sheet Walkthrough.</p>
+  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, made-up hours and rates</span><span>Riverbend Auto Repair · 7 / 9</span></footer>
 </section>
 
 <section class="slide">
-  <div class="sample-mark">Sample Shift Sheet · fictional business · for illustration only</div>
+  <div class="sample-mark">Sample report · fictional business, made-up hours and rates · for illustration only</div>
   <div class="kicker">07 · Financial Impact</div>
   <h2>What this is worth to you, in plain numbers</h2>
   <div class="bar"></div>
   <div class="roi-line">
-    <span>10.0 hrs/wk</span><span class="arrow">×</span>
-    <span>$66.55/hr (blended, see below)</span><span class="arrow">×</span>
+    <span>$570.00/wk (each person's hours × rate, below)</span><span class="arrow">×</span>
     <span>4.33 wks</span><span class="arrow">−</span>
-    <span>$515/mo tools</span><span class="arrow">=</span>
-    <span class="big accent">$2,366.62/month</span>
+    <span>$199/mo tools</span><span class="arrow">=</span>
+    <span class="big accent">$2,269.10/month</span>
   </div>
   <table style="margin-top:2px">
     <tr><th>Whose hours these are</th><th>Hours / wk</th><th>Their rate</th><th>Value / wk</th></tr>
-    <tr><td>Dana, owner</td><td>5.5</td><td>$95/hr</td><td>$522.50</td></tr>
-    <tr><td>Kim, office manager</td><td>3.5</td><td>$28/hr</td><td>$98.00</td></tr>
-    <tr><td>Miguel, lead tech</td><td>1.0</td><td>$45/hr</td><td>$45.00</td></tr>
-    <tr><td><b>All of it, blended</b></td><td><b>10.0</b></td><td><b>$66.55</b></td><td><b>$665.50</b></td></tr>
+    <tr><td>Ray (owner)</td><td>5.1</td><td>$100.00</td><td>$510.00</td></tr>
+    <tr><td>Tony (lead tech)</td><td>1.5</td><td>$40.00</td><td>$60.00</td></tr>
+    <tr><td><b>All of it, blended</b></td><td><b>6.6</b></td><td><b>$86.36</b></td><td><b>$570.00</b></td></tr>
   </table>
   <div class="grid3" style="margin-top:10px">
-    <div class="card"><div class="stat">$2,366.62<small>net ROI every month</small></div></div>
-    <div class="card"><div class="stat">$28,399.44<small>over 12 months</small></div></div>
-    <div class="card"><div class="stat">43.3<small>hours back in your month</small></div></div>
+    <div class="card"><div class="stat">$2,269.10<small>net each month, once it's running, before Accounting Link's price and setup fee</small></div></div>
+    <div class="card"><div class="stat">$27,229.20<small>over 12 months at that pace</small></div></div>
+    <div class="card"><div class="stat">28.5<small>hours back in your month</small></div></div>
   </div>
-  <p class="estimate-label">Estimate, not a promise. Guarantee ledger: 10.0 confirmed hours a week against the 5.0 hour floor, so the floor clears with 5.0 hours to spare. Tool cost uses the top of every published range, the conservative end. In a real Shift Sheet these are your own numbers, counted and confirmed out loud on your discovery call. In this sample they are invented.</p>
-  <div class="guarantee" style="margin-top:auto">My guarantee, in writing: if this Shift Sheet does not identify at least five reclaimable hours per week, counted from time estimates you confirmed out loud, with no task counted twice, you keep the complete Shift Sheet and your $999 fee is refunded in full, initiated promptly. Claim window: 30 days from the day your Shift Sheet is delivered. Terms provided at checkout.</div>
-  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, for illustration only</span><span>Carneros Plumbing &amp; Heating · 8 / 9</span></footer>
+  <p class="estimate-label">Estimate: your times and rates are your own confirmed numbers; how much each tool takes off is my reading of what you told me; tool prices read on October 6, 2026. Net is before Accounting Link, whose price and setup fee are not published.</p>
+  <div class="guarantee" style="margin-top:auto">My guarantee, word for word from my terms page: "<span class="g-sentence">If, after your 45-minute conversation, we can't document at least five reclaimable hours a week in your business — honest, non-duplicative hours you confirm — you still receive your full Shift Sheet AND we refund the $999.</span>" <span class="g-conditions">How we count, and the only conditions: the hours come from time estimates you confirm out loud on your discovery call, itemized per tool in your Shift Sheet, with no task counted twice. Claim window: 30 days from the day your Shift Sheet is delivered. Refunds go to your original payment method; we start the refund ourselves, and how quickly it posts depends on your card issuer.</span></div>
+  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, made-up hours and rates</span><span>Riverbend Auto Repair · 8 / 9</span></footer>
 </section>
 
 <section class="slide">
-  <div class="sample-mark">Sample Shift Sheet · fictional business · for illustration only</div>
+  <div class="sample-mark">Sample report · fictional business, made-up hours and rates · for illustration only</div>
   <div class="kicker">08 · Next Steps</div>
   <h2>Two things. That's it.</h2>
   <div class="bar"></div>
@@ -346,17 +329,17 @@
     <div class="card" style="border-top:5px solid var(--accent)">
       <span class="pill">Step 1</span>
       <h3 style="margin:12px 0 8px">Run the 4-day quick-start plan</h3>
-      <p class="muted">Ten minutes a day, starting Monday, August 24, 2026. Don't aim for perfect: aim for installed.</p>
+      <p class="muted">Ten minutes a day, starting Wednesday, October 7. If a day slips, pick it up the next day.</p>
     </div>
     <div class="card" style="border-top:5px solid var(--accent)">
       <span class="pill">Step 2</span>
       <h3 style="margin:12px 0 8px">Your Shift Sheet Walkthrough</h3>
-      <p class="muted">30 minutes, live. I walk every recommendation with you, answer your questions, and you decide which (if any) of the bigger opportunities are worth your time.</p>
-      <p style="margin-top:12px;font-weight:700"><a href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit" style="color:var(--accent)">Book your Shift Sheet Walkthrough →</a></p>
+      <p class="muted">30 minutes, live. I walk you through every recommendation, run the money math with your numbers, and point out what to set up first, before you spend a dollar on software. You decide which (if any) of the bigger opportunities are worth your time.</p>
+      <p style="margin-top:12px;font-weight:700">Booked: Monday, October 12, 4:30 pm, on a screen share. Brenda put it on your calendar. To move it, email or call me.</p>
     </div>
   </div>
-  <p class="muted" style="margin-top:16px">Lucas Vegvary · lucas@localaishop.com · phone: see website</p>
-  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, for illustration only</span><span>Carneros Plumbing &amp; Heating · 9 / 9</span></footer>
+  <p class="muted" style="margin-top:16px">Lucas Vegvary · The Local AI Shop · Napa, California · <a href="mailto:lucas@localaishop.com" style="color:inherit">lucas@localaishop.com</a> · <a href="tel:+17079401306" style="color:inherit">(707) 940-1306</a> · <a href="https://localaishop.com" style="color:inherit">localaishop.com</a></p>
+  <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, made-up hours and rates</span><span>Riverbend Auto Repair · 9 / 9</span></footer>
 </section>
 
 </body>

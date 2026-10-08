@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practical examples by trade · The Local AI Shop</title>
+<meta name="description" content="Everyday office work in local trade businesses, and the kind of tool that usually handles each piece. Examples, not client results.">
+<link rel="canonical" href="https://localaishop.com/examples.html">
+<meta name="theme-color" content="#111418">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Local AI Shop">
+<meta property="og:url" content="https://localaishop.com/examples.html">
+<meta property="og:title" content="Practical examples by trade · The Local AI Shop">
+<meta property="og:description" content="Everyday office work in local trade businesses, and the kind of tool that usually handles each piece. Examples, not client results.">
+<script src="carry.js" defer></script>
+<script src="exit-popup.js" defer></script>
+<style>
+  :root{
+    --accent:#F06000;
+    --accent-dark:#c94f00;
+    --accent-deep:#a84200;
+    --ink:#111418;
+    --ink-2:#1b2027;
+    --paper:#faf9f6;
+    --card:#ffffff;
+    --line:#e6e2da;
+    --muted:#5d6570;
+    --max:880px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  [id]{scroll-margin-top:76px}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:700;line-height:1.15;letter-spacing:-.01em}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .kicker{display:block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px}
+  .btn{display:inline-block;background:var(--accent-dark);color:#fff;text-decoration:none;font-weight:700;font-size:16px;padding:16px 28px;border-radius:10px;transition:background .15s}
+  .btn:hover{background:var(--accent-deep)}
+  .sub-note{display:block;margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* nav (same as the home page, trimmed) */
+  nav{position:sticky;top:0;z-index:50;background:rgba(17,20,24,.93);backdrop-filter:blur(8px);color:#fff}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px;max-width:1080px}
+  .logo{font-family:Georgia,serif;font-weight:700;font-size:20px;text-decoration:none;white-space:nowrap}
+  .logo span{color:var(--accent)}
+  nav .btn{padding:10px 18px;font-size:14px;white-space:nowrap}
+  @media(max-width:620px){ .nx{display:none} nav .btn{padding:9px 12px;font-size:13.5px} }
+  @media(max-width:560px){ html,body{overflow-x:hidden;overflow-x:clip} .wrap{padding-inline:20px} nav .wrap{height:60px} .logo{font-size:17px} }
+  @media(max-width:370px){ .wrap{padding-inline:14px} .logo{font-size:15px} nav .btn{padding:8px 10px;font-size:13px} }
+
+  /* top */
+  .top{background:var(--ink);color:#fff;padding:64px 0 52px}
+  .top .kicker{color:var(--accent)}
+  .top h1{font-size:clamp(32px,5vw,48px);max-width:720px}
+  .top .lead{font-size:18.5px;color:#c3cad3;max-width:680px;margin-top:18px}
+  .honest{background:var(--paper);color:var(--ink);border-left:5px solid var(--accent-dark);border-radius:10px;padding:16px 20px;margin-top:28px;max-width:680px;font-size:15.5px}
+  .honest b{display:block;margin-bottom:2px}
+  .jump{margin-top:28px}
+  .jump p{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9aa3ad;margin-bottom:10px}
+  .jump ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .jump a{display:inline-block;text-decoration:none;font-size:14.5px;padding:8px 14px;border:1px solid rgba(255,255,255,.28);border-radius:99px;color:#fff}
+  .jump a:hover,.jump a:focus-visible{background:rgba(255,255,255,.1);border-color:var(--accent)}
+
+  /* how to read */
+  .read{padding:44px 0 8px}
+  .read p{max-width:680px;color:#3c434c;font-size:16.5px}
+
+  /* trade blocks */
+  .trades{padding:20px 0 40px}
+  .trade{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 26px;margin-top:22px}
+  .trade h2{font-size:clamp(23px,3.2vw,28px)}
+  .trade .also{font-size:14px;color:var(--muted);margin-top:4px}
+  .ex{list-style:none;margin-top:18px}
+  .ex li{border-top:1px solid var(--line);padding:14px 0;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px}
+  .ex .lbl{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+  .ex .tool .lbl{color:var(--accent-deep)}
+  .ex p{font-size:15.5px;color:#2e343b}
+  .loop{background:#fff4ec;border:1px solid #f4d9c4;border-radius:10px;padding:12px 16px;font-size:15px;color:#4b3a2d;margin-top:6px}
+  .loop b{color:var(--ink)}
+  .top-link{display:inline-block;margin-top:14px;font-size:13.5px;color:var(--muted);text-decoration:none}
+  @media(max-width:640px){ .ex li{grid-template-columns:1fr} .trade{padding:22px 18px} }
+
+  /* not / next */
+  .next{padding:28px 0 64px}
+  .next h2{font-size:clamp(24px,3.4vw,32px);margin-bottom:12px}
+  .next p{max-width:680px;color:#3c434c;font-size:16.5px;margin-bottom:14px}
+  .steps{list-style:none;margin:18px 0 6px;max-width:680px}
+  .steps li{padding:12px 0 12px 40px;position:relative;border-top:1px solid var(--line);font-size:16px;color:#2e343b}
+  .steps li::before{content:counter(s);counter-increment:s;position:absolute;left:0;top:11px;width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .steps{counter-reset:s}
+  .text-link{font-weight:700;color:var(--accent-deep)}
+
+  /* final */
+  .final{background:var(--ink);color:#fff;text-align:center;padding:64px 0}
+  .final h2{font-size:clamp(28px,4.4vw,40px);max-width:680px;margin:0 auto 14px}
+  .final p{color:#b9c0c9;max-width:560px;margin:0 auto 28px}
+  .final .sub-note{color:#8d96a1}
+  .final a.tel{color:#fff;font-weight:700;text-decoration:none;border-bottom:1px solid var(--accent)}
+
+  footer{background:var(--ink);color:#8d96a1;font-size:13.5px;padding:36px 0 52px;border-top:1px solid rgba(255,255,255,.08)}
+  footer b{color:#fff}
+  footer a{color:#c6ccd4}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html">The Local AI Shop<span>.</span></a>
+    <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book<span class="nx"> my</span> free<span class="nx"> 15-minute</span> call</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="top" id="top">
+  <div class="wrap">
+    <span class="kicker">Practical examples, by trade</span>
+    <h1>What this can look like in a business like yours</h1>
+    <p class="lead">Every trade has its own second shift: the calls, quotes, reminders and invoices that wait for you after the trucks are parked. Below are everyday examples from the trades I write to across Napa, Solano and Sonoma, each one matched with the kind of tool that usually handles it. Find your trade and skim.</p>
+    <div class="honest">
+      <b>These are examples, not results.</b>
+      Nothing here is a client story, a statistic or a promise. You won't find hours saved or dollars saved, because those belong to a real business, and I'd rather count yours with you than guess.
+    </div>
+    <div class="jump" role="navigation" aria-label="Trades on this page">
+      <p>Jump to your trade</p>
+      <ul>
+        <li><a href="#heating-air">Heating and air</a></li>
+        <li><a href="#plumbing">Plumbing, septic and wells</a></li>
+        <li><a href="#electrical">Electrical</a></li>
+        <li><a href="#auto">Auto repair and body</a></li>
+        <li><a href="#glass">Glass, windows and doors</a></li>
+        <li><a href="#roofing">Roofing</a></li>
+        <li><a href="#building">Builders and remodelers</a></li>
+        <li><a href="#outdoor">Landscaping, fences and pools</a></li>
+        <li><a href="#pest">Pest control</a></li>
+        <li><a href="#cleaning">Cleaning and carpet care</a></li>
+        <li><a href="#appliance">Appliance repair</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<section class="read">
+  <div class="wrap">
+    <span class="kicker">How to read these</span>
+    <p>Each example names a time-drain, then the kind of tool that handles it. Plenty of them are plain software with no AI in it, and some may already be sitting unused inside software you pay for. I'd pick whatever is boring, proven and fits how you already work. In every one, the tool does the repeat work and a person stays in the loop: you, or whoever you trust with the office.</p>
+  </div>
+</section>
+
+<section class="trades">
+  <div class="wrap">
+
+    <article class="trade" id="heating-air">
+      <h2>Heating and air conditioning</h2>
+      <p class="also">Including radiant heating and sheet metal shops.</p>
+      <ul class="ex">
+        <li><p><span class="lbl">The time-drain</span>The phone rings while you're in an attic or on a roof, and the caller tries the next company on the list.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Missed-call text-back. The caller gets a short text saying you got the call and when you'll call back.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Maintenance-plan customers who need their spring and fall visits, tracked on a spreadsheet or in your head.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Service reminders that go out from your customer list when a visit comes due, with a link to pick a time.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Replacement quotes that go out and then go quiet.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Quote follow-up. A polite check-in goes out a few days after the quote and stops the moment the customer answers.</p></li>
+      </ul>
+      <p class="loop"><b>You stay in charge:</b> you approve the wording of every message before it runs, and which calls get returned first is still your call.</p>
+      <a class="top-link" href="#top">↑ Back to the list of trades</a>
+    </article>
+
+    <article class="trade" id="plumbing">
+      <h2>Plumbing, water heaters, septic and wells</h2>
+      <p class="also">Including pump service and portable sanitation.</p>
+      <ul class="ex">
+        <li><p><span class="lbl">The time-drain</span>Late-night calls, with the real emergencies mixed in with calls that could wait until morning.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>An after-hours answering setup that takes the caller's name, address and problem and sends it to your phone as one message.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Tank pumping and well service that comes due years after the last visit, long after the customer forgot.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Reminders based on the last service date, sent to the customer with a way to book.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Phone tag to set up routine jobs, like a water heater swap.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Online booking that offers only the time windows you open.</p></li>
+      </ul>
+      <p class="loop"><b>You stay in charge:</b> what counts as an emergency is still your judgment, and the booking page offers only the times you choose.</p>
+      <a class="top-link" href="#top">↑ Back to the list of trades</a>
+    </article>
+
+    <article class="trade" id="electrical">
+      <h2>Electrical</h2>
+      <p class="also">Service work, custom homes, solar and generators.</p>
+      <ul class="ex">
+        <li><p><span class="lbl">The time-drain</span>Writing estimates from scratch at the kitchen table.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Quote templates: your common jobs saved as line items, so a quote gets picked and adjusted instead of typed fresh.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Back-and-forth with customers about when the crew or the inspector will show up.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Appointment confirmations and reminders by email or text, sent from your schedule.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Chasing payment on finished jobs.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Invoice reminders on a schedule you set, which stop as soon as the invoice is paid.</p></li>
+      </ul>
+      <p class="loop"><b>You stay in charge:</b> you set the prices and the wording on the templates. Nothing reaches a customer that you haven't approved.</p>
+      <a class="top-link" href="#top">↑ Back to the list of trades</a>
+    </article>
+
+    <article class="trade" id="auto">
+      <h2>Auto repair, auto body and RV service</h2>
+      <p class="also">Including paint and restoration, tint and wraps.</p>
+      <ul class="ex">
+        <li><p><span class="lbl">The time-drain</span>"Is my car ready yet?" calls, all day long.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Status texts. When a job is marked ready, the customer gets a text.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Phone tag to get an estimate or an added repair approved.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Estimates sent by text or email, so the customer can approve or call back with questions.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Typing closed tickets into the books on a Saturday morning.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>A link between your shop software and your bookkeeping, so each closed repair order and its payment post on their own.</p></li>
+      </ul>
+      <p class="loop"><b>You stay in charge:</b> nobody hears the car is ready until someone in the shop marks it ready. What gets repaired is still between you and the customer.</p>
+      <a class="top-link" href="#top">↑ Back to the list of trades</a>
+    </article>
+
+    <article class="trade" id="glass">
+      <h2>Glass, windows and doors</h2>
+      <p class="also">Auto glass, storefronts, shower doors and custom doors.</p>
+      <ul class="ex">
+        <li><p><span class="lbl">The time-drain</span>Driving out to measure before you know what the job is.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>An intake form that collects the address, a few photos and the size of the job before the visit.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Customers calling to ask whether their glass has come in.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>A ready-made text you send with one tap when an order arrives, with a link to pick an install time.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Quotes waiting on supplier pricing, then forgotten.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Quote follow-up that reminds you first, then checks in with the customer, so nothing sits.</p></li>
+      </ul>
+      <p class="loop"><b>You stay in charge:</b> the photos help you prepare, and you still decide whether a job needs a visit.</p>
+      <a class="top-link" href="#top">↑ Back to the list of trades</a>
+    </article>
+
+    <article class="trade" id="roofing">
+      <h2>Roofing</h2>
+      <p class="also">Repairs, replacements and inspections.</p>
+      <ul class="ex">
+        <li><p><span class="lbl">The time-drain</span>Leak calls that pile up after the first big rain.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Missed-call text-back plus a short form for photos and the address, so you can sort the calls the next morning.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Weather pushing jobs back, and every customer on that day needing a call.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>One message to everyone booked on the affected day, written once and sent from your schedule.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Inspection notes typed up at night.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Voice notes recorded on site and turned into a clean written draft that you read and fix before it goes out.</p></li>
+      </ul>
+      <p class="loop"><b>You stay in charge:</b> you decide which jobs move and in what order. The tool only sends the message you approved.</p>
+      <a class="top-link" href="#top">↑ Back to the list of trades</a>
+    </article>
+
+    <article class="trade" id="building">
+      <h2>Builders, remodelers, painters and specialty shops</h2>
+      <p class="also">Including cabinetry, flooring, steel fabrication and construction maintenance.</p>
+      <ul class="ex">
+        <li><p><span class="lbl">The time-drain</span>Inquiries for work you don't do, which you only find out halfway through the call.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>An intake form that asks the project type, rough timeline and location up front, so you see the fit before you call back.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Change orders agreed in the driveway, then remembered differently later.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Change orders written up and signed electronically before the extra work starts.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Homeowners asking how the job is going.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>A short weekly update from a template. You add a line and a photo from your phone, and it goes to the client.</p></li>
+      </ul>
+      <p class="loop"><b>You stay in charge:</b> the form sorts the inquiries. Who you call back, and what you agree to build, is still yours to decide.</p>
+      <a class="top-link" href="#top">↑ Back to the list of trades</a>
+    </article>
+
+    <article class="trade" id="outdoor">
+      <h2>Landscaping, trees, fences, decks and pools</h2>
+      <p class="also">Design, installation, upkeep and pool service.</p>
+      <ul class="ex">
+        <li><p><span class="lbl">The time-drain</span>Regular customers asking when the crew is coming.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>On-the-way texts sent from your schedule when the crew heads out.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Seasonal work that depends on past customers remembering your name.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Seasonal reminder emails to past customers ahead of cleanup, trimming or pool season.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Bids where you can't see the yard until you drive out.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>An intake form that collects photos and the address before the site visit.</p></li>
+      </ul>
+      <p class="loop"><b>You stay in charge:</b> nothing goes out about a day you didn't schedule, and which bids you take is still your call.</p>
+      <a class="top-link" href="#top">↑ Back to the list of trades</a>
+    </article>
+
+    <article class="trade" id="pest">
+      <h2>Pest control</h2>
+      <p class="also">Recurring service and one-time treatments.</p>
+      <ul class="ex">
+        <li><p><span class="lbl">The time-drain</span>Calls coming in while you're out on a route.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Missed-call text-back that tells the caller when you'll call back.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Recurring visits that each need a confirming call.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Visit reminders that go out on their own, with an easy way to reschedule.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Service agreements that lapse because nobody reminded the customer.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Renewal reminders sent before an agreement ends.</p></li>
+      </ul>
+      <p class="loop"><b>You stay in charge:</b> you approve each reminder's wording once, and you can switch any of it off.</p>
+      <a class="top-link" href="#top">↑ Back to the list of trades</a>
+    </article>
+
+    <article class="trade" id="cleaning">
+      <h2>Cleaning, carpet care and janitorial</h2>
+      <p class="also">Including water damage cleanup and commercial cleaning.</p>
+      <ul class="ex">
+        <li><p><span class="lbl">The time-drain</span>Quote requests you can't price until you know the size, the rooms and what they look like.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>An online quote request form that asks for those details and a few photos up front.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Regular clients moving their usual day.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Online rescheduling inside rules you set, like which days are open.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Typing up invoices from the week's job sheets.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Invoices made from the finished job in your scheduling app, with a link to pay online.</p></li>
+      </ul>
+      <p class="loop"><b>You stay in charge:</b> you still price every job yourself. The form only gathers what you'd ask anyway.</p>
+      <a class="top-link" href="#top">↑ Back to the list of trades</a>
+    </article>
+
+    <article class="trade" id="appliance">
+      <h2>Appliance repair</h2>
+      <p class="also">In-home repair and parts.</p>
+      <ul class="ex">
+        <li><p><span class="lbl">The time-drain</span>Getting the model number and the problem over the phone.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>An intake form that asks for the model number, a photo of the label and what's wrong, so you can check parts before the trip.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Customers calling to ask whether the part has arrived.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>A text when the part comes in, with a link to pick a repair time.</p></li>
+        <li><p><span class="lbl">The time-drain</span>Missed calls while you're at a job.</p>
+            <p class="tool"><span class="lbl">What can handle it</span>Missed-call text-back that tells the caller when you'll call back.</p></li>
+      </ul>
+      <p class="loop"><b>You stay in charge:</b> you decide what's worth a trip, and the customer hears only what you've approved.</p>
+      <a class="top-link" href="#top">↑ Back to the list of trades</a>
+    </article>
+
+  </div>
+</section>
+
+<section class="next">
+  <div class="wrap">
+    <span class="kicker">The next step</span>
+    <h2>How I'd find what fits yours</h2>
+    <p>This page doesn't tell you which tool to buy or how to set it up. The right pick depends on the software you already use, how your week runs and what your time is worth. Guessing that from a web page would be guessing.</p>
+    <p>Here is how I'd find out for your business:</p>
+    <ol class="steps">
+      <li>On a free 15-minute video call, you tell me how a normal week runs. I'll name the one fix I'd start with for the task eating the most of your time, and the idea is yours to keep whether or not we ever work together.</li>
+      <li>If you want me to go deeper after that, I'll tell you about my paid service ($999), and you decide. In it, I count your after-hours office time with you, find the pieces a boring, proven tool can take, and hand you a written plan, checked over by a competent human in the loop.</li>
+    </ol>
+    <p><a class="text-link" href="sample-report.html">See a sample of the written plan a paying client gets (a made-up business) →</a></p>
+    <p>The guarantee and its conditions are on the <a class="text-link" href="index.html">home page</a>, word for word.</p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Want to know where your shop would start?</h2>
+    <p>Bring your trade and a normal week. I'll name the one fix I'd start with.</p>
+    <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
+    <span class="sub-note needs-phone">Prefer to talk? Call <a class="tel" href="tel:+17079401306">(707) 940-1306</a>. It rings through to me.</span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Lucas Vegvary · The Local AI Shop</b><br>
+    Napa, California<span class="needs-phone"> · <a href="tel:+17079401306">(707) 940-1306</a></span> · <a href="mailto:lucas@localaishop.com">lucas@localaishop.com</a><br>
+    Mail: 3325 Jefferson St #1131, Napa, CA 94558<br>
+    The Local AI Shop is operated by My Custom Sleep Journey LLC · Napa County, California<br>
+    <a href="privacy.html">Privacy policy &amp; SMS terms</a> · <a href="terms.html">Terms, guarantee &amp; refund policy</a>
+  </div>
+</footer>
+
+<script>
+/* Launch guard: until ./fill.sh fills the two tokens, phone lines stay hidden and booking links open an email instead. Inert once filled. */
+(function(){
+  var P='__PH'+'ONE__', B='__BOOKING'+'_URL__';
+  if(document.body.innerHTML.indexOf(P)>-1){document.querySelectorAll('.needs-phone').forEach(function(e){e.style.display='none';});}
+  document.querySelectorAll('a[href="'+B+'"]').forEach(function(a){a.setAttribute('href','mailto:lucas@localaishop.com?subject=Booking%20request');});
+})();
+</script>
+</body>
+</html>

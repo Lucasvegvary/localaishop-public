@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book your free 15-minute call · The Local AI Shop</title>
+<meta name="robots" content="noindex">
+<script src="/carry.js" defer></script>
+<script src="/exit-popup.js" defer></script>
+<style>
+  :root{--accent:#F06000;--accent-dark:#c94f00;--accent-deep:#a84200;--ink:#111418;--paper:#faf9f6;--line:#e6e2da;--muted:#5d6570}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+  main{max-width:620px;margin:0 auto;padding:44px 24px 80px}
+  .home{display:inline-block;margin-bottom:26px;font-size:14px;text-decoration:none;color:var(--muted)}
+  h1{font-family:Georgia,'Times New Roman',serif;line-height:1.2;font-size:clamp(28px,6vw,36px);margin-bottom:12px}
+  p{color:#2e343b;margin-bottom:22px}
+  .btn{display:block;text-align:center;background:var(--accent-dark);color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:17px 24px;border-radius:10px}
+  .btn:hover{background:var(--accent-deep)}
+  .what{margin-top:16px;font-size:16px}
+  .second{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);font-size:16px}
+  .second a{color:var(--accent-deep);font-weight:700}
+  .tel{font-size:14.5px;color:var(--muted);margin-top:22px}
+  .tel a{color:var(--accent-deep);font-weight:700}
+  @media(max-width:370px){main{padding-inline:16px}}
+</style>
+</head>
+<body>
+<main>
+  <a class="home" href="/index.html">← The Local AI Shop</a>
+  <h1>A free 15-minute call about your week</h1>
+  <a class="btn" id="book" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
+  <p class="what">On a free 15-minute video call, you tell me how a normal week runs. I'll name the one fix I'd start with for the task eating the most of your time, and the idea is yours to keep whether or not we ever work together. If you want me to go deeper after that, I'll tell you about my paid service ($999), and you decide.</p>
+  <p class="second">Curious first? <a id="examples" href="/examples.html">See what this looks like for a business like yours</a>.</p>
+  <p class="tel needs-phone">Prefer to talk? Call <a href="tel:+17079401306">(707) 940-1306</a>.</p>
+</main>
+<script>
+/* Launch guard: until ./fill.sh fills the booking token, the booking link opens an email instead. Inert once filled. */
+(function(){
+  var B='__BOOKING'+'_URL__';
+  document.querySelectorAll('a[href="'+B+'"]').forEach(function(a){a.setAttribute('href','mailto:lucas@localaishop.com?subject=Booking%20request');});
+})();
+</script>
+</body>
+</html>
