@@ -131,6 +131,14 @@
         },
         {
           "@type": "Question",
+          "name": "What happens after my report is delivered?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your walkthrough, and your first hour of setup help on what the report recommends, both included in the $999. If you want more built after that, the First Shift Build has a fixed price on this page, and anything bigger is quoted in writing."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Aren't we too small for this?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -215,13 +223,17 @@
   .center{text-align:center}
   h2.sec{font-size:clamp(26px,3.6vw,36px);max-width:680px}
 
+  /* skip link: first Tab stop, jumps past the nav */
+  .skip{position:absolute;left:-9999px;top:0;z-index:100;background:#fff;color:var(--ink);padding:10px 16px;border-radius:0 0 10px 0;font-weight:700;font-size:15px;text-decoration:none}
+  .skip:focus{left:0}
+
   /* nav */
   nav{position:sticky;top:0;z-index:50;background:rgba(17,20,24,.93);backdrop-filter:blur(8px);color:#fff}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
   .logo{font-family:Georgia,serif;font-weight:700;font-size:20px;text-decoration:none;white-space:nowrap}
   .logo span{color:var(--accent)}
   nav .links{display:flex;gap:26px;align-items:center;font-size:14.5px}
-  nav .links a{text-decoration:none;opacity:.85}
+  nav .links a{text-decoration:none;opacity:.85;white-space:nowrap}
   nav .links a:hover{opacity:1}
   nav .links .btn{padding:10px 18px;font-size:14px;opacity:1}
   .mnav{display:none;position:relative}
@@ -231,8 +243,8 @@
   .mnav .panel{position:absolute;right:0;top:44px;background:var(--ink-2);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:10px 0;min-width:190px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
   .mnav .panel a{display:block;padding:10px 18px;text-decoration:none;font-size:15px}
   .mnav .panel a:hover{background:rgba(255,255,255,.06)}
-  @media(max-width:900px){
-    nav .links a:not(.btn){display:none}
+  @media(max-width:1000px){
+    nav .links > a:not(.btn){display:none}
     .mnav{display:block}
   }
   @media(max-width:620px){
@@ -249,6 +261,9 @@
     .logo{font-size:17px}
     .mnav .panel{right:0}
   }
+  @media(max-width:400px){
+    .logo{white-space:normal;line-height:1.1;max-width:100px;font-size:15.5px}
+  }
   @media(max-width:370px){
     .wrap{padding-inline:14px}
     .logo{font-size:15px}
@@ -261,8 +276,6 @@
   .hero h1{font-size:clamp(36px,5.6vw,58px);max-width:780px}
   .hero h1 em{font-style:normal;color:var(--accent)}
   .hero .lead{color:#c3cad3;margin:22px 0 30px}
-  .hero .lead-a{margin-bottom:0}
-  .hero .lead-b{margin-top:12px}
   .hero .ctas{display:flex;gap:16px;flex-wrap:wrap}
   .strip{border-top:1px solid rgba(255,255,255,.12);margin-top:56px;padding-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
   .strip .sh{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:15px;font-weight:700;line-height:1.15;letter-spacing:-.01em;margin-bottom:2px;color:#fff}
@@ -277,11 +290,21 @@
     .hero .ctas{order:4;display:grid;grid-template-columns:1fr;gap:12px}
     .hero .ctas .btn{text-align:center;width:100%;padding:14px 20px}
     .hero .sub-note{order:5}
-    .hero .lead-b{order:6;font-size:17px;margin:22px 0 0}
     .hero .strip{order:7;margin-top:36px}
     .strip{grid-template-columns:1fr}
     section{padding:64px 0}
   }
+
+  /* three examples, right under the hero (audit 2026-10-11: show the practical value early) */
+  .tasks{padding:64px 0}
+  .task-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  @media(max-width:820px){.task-grid{grid-template-columns:1fr}}
+  .task{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 22px 20px}
+  .task .lbl{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .task .lbl.fix{color:var(--accent-deep);margin-top:14px}
+  .task p{font-size:15.5px}
+  .tasks-note{margin-top:22px;font-size:15px;color:var(--muted)}
+  .tasks-note a{color:var(--accent-deep);font-weight:700}
 
   /* letter welcome */
   .letter{background:#fff4ec;border-block:1px solid #f4d9c4;padding:56px 0}
@@ -290,20 +313,21 @@
   .letter h2{font-size:27px;margin-bottom:10px}
   .letter p{max-width:660px;color:#4b3a2d;margin-bottom:6px}
   .letter .btn{margin-top:14px}
-  .letter img{width:100%;border-radius:14px;box-shadow:0 14px 36px rgba(75,58,45,.22);display:block}
+  .letter img{width:100%;height:auto;border-radius:14px;box-shadow:0 14px 36px rgba(75,58,45,.22);display:block}
   .letter .cap{font-size:12px;color:#76604e;margin-top:8px}
 
   /* steps */
   .how .lead{margin-top:14px}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
-  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 22px;position:relative}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:44px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 18px;position:relative}
   a.step{text-decoration:none;display:block}
   a.step:hover{border-color:var(--accent-dark)}
   .step .n{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);font-family:-apple-system,sans-serif}
   .step h3{font-size:18px;margin:10px 0 8px}
   .step p{font-size:14.5px;color:var(--muted)}
   .step .t{display:block;margin-top:14px;font-size:12.5px;font-weight:700;color:var(--ink)}
-  @media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:1020px){.steps{grid-template-columns:1fr 1fr 1fr}}
+  @media(max-width:760px){.steps{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.steps{grid-template-columns:1fr}}
 
   /* report */
@@ -361,6 +385,8 @@
   .plate{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--accent-dark);border-radius:10px;padding:16px 20px;font-size:15px}
   .plate h4{font-size:15.5px;margin-bottom:4px}
   .plate p{font-size:14.5px;margin:0}
+  .plate p a{color:var(--accent-deep);font-weight:700}
+  .straight .early{margin-top:30px;font-size:14.5px;color:var(--muted);max-width:760px}
 
   /* founder */
   .founder .wrap{display:flex;gap:44px;align-items:flex-start;flex-wrap:wrap}
@@ -394,16 +420,19 @@
   .gdoc p.conds{font-size:16.5px;line-height:1.75;margin-top:16px;color:#2e343b}
   .paper .sample-link{display:inline-block;margin-top:14px;font-size:14px;font-weight:700;color:var(--accent-deep)}
 
-  @media print{ nav,.hero,.letter,.how,.report,.prices-sec,.straight,.founder,.faq,.final,footer{display:none} .guarantee{background:#fff;color:#000;padding:0} .gdoc{box-shadow:none} }
+  @media print{ nav,.hero,.tasks,.letter,.how,.report,.prices-sec,.straight,.founder,.faq,.final,footer{display:none} .guarantee{background:#fff;color:#000;padding:0} .gdoc{box-shadow:none} }
 </style>
 </head>
 <body>
+
+<a class="skip" href="#main">Skip to main content</a>
 
 <nav>
   <div class="wrap">
     <a class="logo" href="#top">The Local AI Shop<span>.</span></a>
     <div class="links">
       <a href="#how">How it works</a>
+      <a href="examples.html">Examples</a>
       <a href="#guarantee">The guarantee</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">Questions</a>
@@ -411,6 +440,7 @@
         <summary>Menu</summary>
         <div class="panel">
           <a href="#how">How it works</a>
+          <a href="examples.html">Examples for your trade</a>
           <a href="#guarantee">The guarantee</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">Questions</a>
@@ -426,23 +456,51 @@
 
 <header class="hero" id="top">
   <div class="wrap">
-    <span class="kicker">Napa and Solano's local AI shop, for owner-run home and trade service businesses with 2 to 20 people</span>
+    <span class="kicker">Napa, Solano and Sonoma's local AI shop, for owner-run home and trade service businesses with 2 to 20 people</span>
     <h1>You work two jobs. <em>Let's shrink the second one.</em></h1>
-    <p class="lead lead-a">You close at six. Then you go home and start the second job. The second shift is the email, the scheduling, the quotes, the follow-up that waits for you after the trucks are parked.</p>
-    <p class="lead lead-b">My paid service ($999) counts your second-shift hours with you, finds the ones a boring, proven tool can take, and hands you a written plan for getting them back, checked over by a competent human in the loop before you see it. One question sorts out whether this is for you: who handles the invoicing and scheduling after you close up? If that's you, keep reading.</p>
+    <p class="lead lead-a">I do the AI shopping for your business: current prices, which tools fit, and why. Start with a free 15-minute call and one practical idea to keep. If you want to go deeper, the $999 service includes a discovery call, written report, walkthrough, and your first hour of setup help after the report is delivered.</p>
     <div class="ctas">
       <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
-      <a class="btn ghost" href="#guarantee">Read the guarantee first</a>
+      <a class="btn ghost" href="examples.html">See examples for your trade</a>
     </div>
-    <span class="sub-note" style="color:#9aa3ad">The 15 minutes is free and specific to your business. One useful idea to keep.</span>
+    <span class="sub-note" style="color:#9aa3ad">After you pick a time: your name, five quick yes/no questions, then your phone and email.</span>
     <div class="strip">
-      <div><p class="sh">Guaranteed in writing.</p><p>Five reclaimable hours a week, confirmed by you, or I refund the $999. You keep your written report either way. Full wording below.</p></div>
-      <div><p class="sh">$999, flat, for the interview, written report and walkthrough.</p><p>The 15 minutes stays free. Stated up front because you'd find out anyway.</p></div>
+      <div><p class="sh">Guaranteed in writing.</p><p>Five reclaimable hours a week, confirmed by you, or I refund the $999. You keep your written report either way. <a href="#guarantee">Read the exact wording</a>.</p></div>
+      <div><p class="sh">$999, flat.</p><p>The interview, written report, walkthrough and your first hour of setup help. Stated up front because you'd find out anyway.</p></div>
       <div><p class="sh">No long-term contracts.</p><p>One paid service. What happens after is entirely up to you.</p></div>
       <div><p class="sh">You keep the report.</p><p>Every page, every tool, either way.</p></div>
     </div>
   </div>
 </header>
+
+<section class="tasks" id="examples">
+  <div class="wrap">
+    <span class="kicker">What this looks like</span>
+    <h2 class="sec">Three jobs from the second shift, and what can handle them</h2>
+    <p class="lead" style="font-size:17px;margin-top:14px">You close at six. Then you go home and start the second job. The second shift is the email, the scheduling, the quotes, the follow-up that waits for you after the trucks are parked.</p>
+    <div class="task-grid">
+      <div class="task">
+        <p class="lbl">The time-drain</p>
+        <p>The phone rings while you're on a roof or under a sink, and the caller tries the next company on the list.</p>
+        <p class="lbl fix">What can handle it</p>
+        <p>Missed-call text-back. The caller gets a short text saying you got the call and when you'll call back.</p>
+      </div>
+      <div class="task">
+        <p class="lbl">The time-drain</p>
+        <p>Quotes that go out and then go quiet.</p>
+        <p class="lbl fix">What can handle it</p>
+        <p>Quote follow-up. A polite check-in goes out a few days after the quote and stops the moment the customer answers.</p>
+      </div>
+      <div class="task">
+        <p class="lbl">The time-drain</p>
+        <p>Chasing payment on finished jobs.</p>
+        <p class="lbl fix">What can handle it</p>
+        <p>Invoice reminders on a schedule you set, which stop as soon as the invoice is paid.</p>
+      </div>
+    </div>
+    <p class="tasks-note">These are examples, not results. You approve the wording of every message before it runs. <a href="examples.html">See examples for your trade →</a></p>
+  </div>
+</section>
 
 <div class="letter" id="letter">
   <div class="wrap">
@@ -453,54 +511,17 @@
       <span class="sub-note">This page isn't going anywhere if you'd rather read first.<span class="needs-phone"> Prefer to talk? Call <a href="tel:+17079401306" style="font-weight:700;color:var(--accent-deep)">(707) 940-1306</a>.</span></span>
     </div>
     <div>
-      <img src="photos/napa-welcome-sign.jpg" alt="The Welcome to Napa Valley sign beside the vineyards" loading="lazy">
+      <img src="photos/napa-welcome-sign.jpg" alt="The Welcome to Napa Valley sign beside the vineyards" width="1400" height="1050" loading="lazy">
       <p class="cap">The sign says welcome. I take it literally.</p>
     </div>
   </div>
 </div>
 
-<section class="how" id="how">
-  <div class="wrap">
-    <span class="kicker">The process</span>
-    <h2 class="sec">How it works</h2>
-    <p class="lead" style="font-size:16.5px">Your time on calls: about ninety minutes, across three. Your written report is checked over by a competent human in the loop, and it arrives before your walkthrough call, which is scheduled when you book the paid service. The quick-start plan asks for ten minutes a day for four days. A bigger switch, like moving off paper, happens on a day you pick.</p>
-    <div class="steps">
-      <a class="step" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">
-        <span class="n">Step 1 · Free</span>
-        <h3>The free 15-minute call</h3>
-        <p>A short video call about how your week goes. I name the one fix I'd start with for your business. If that's all you want, keep it with my blessing.</p>
-        <span class="t">15 min · $0 · book this one →</span>
-      </a>
-      <div class="step">
-        <span class="n">Step 2</span>
-        <h3>The discovery call</h3>
-        <p>A 45-minute interview. I count the hours with you: how often each task hits, how long it takes, what your hour is worth. Nothing goes on the list unless you hear the math and say yes out loud.</p>
-        <span class="t">45 min · part of the $999</span>
-      </div>
-      <div class="step">
-        <span class="n">Step 3</span>
-        <h3>Your written report</h3>
-        <p>Nine pages, checked over by a competent human in the loop. Every pain point a tool can fix, mapped to a specific tool with its price (when the maker publishes one), setup time, and hours returned, plus a 4-day quick-start plan: ten minutes a day, in a set order.</p>
-        <span class="t">arrives before your walkthrough</span>
-      </div>
-      <div class="step">
-        <span class="n">Step 4</span>
-        <h3>The walkthrough</h3>
-        <p>Your report is already in your inbox. We walk it together for 30 minutes, run the money math with your numbers, and flag the install-order traps before you spend a dollar on software.</p>
-        <span class="t">30 min · included</span>
-      </div>
-    </div>
-    <div class="center" style="margin-top:36px">
-      <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
-    </div>
-  </div>
-</section>
-
 <section class="report">
   <div class="wrap">
     <div>
       <span class="kicker">What you get for $999</span>
-      <h2 class="sec">I do the AI shopping for you: current prices, and the reasons behind every pick.</h2>
+      <h2 class="sec">Nine pages. Every pick shows its price, when the maker publishes one, and why I chose it.</h2>
       <p class="lead">I'm not paid by any company I recommend. If that ever changes, your report will say so next to that pick, before you buy anything.</p>
       <ol>
         <li>Cover page: your business, your date, and the report's primary focus</li>
@@ -522,9 +543,52 @@
         <tr><td>Keying the pink copies into QuickBooks on Saturday</td><td>Accounting Link</td><td>2.5</td></tr>
         <tr><td>The lead tech on hold with suppliers (the owner counted half)</td><td>Tekmetric</td><td>1.5</td></tr>
       </table>
-      <p class="sum">The money math in the sample: 6.6 hours a week (the owner's 5.1 at $100 an hour, his lead tech's 1.5 at $40) is worth $570.00 a week. Over a month (4.33 weeks), less $199 for Tekmetric, that's $2,269.10 a month once it's running. Accounting Link's price and setup fee aren't published, so they're not in that number. It's an estimate: the minutes and rates are the owner's, and how much each tool takes off is my reading. Three more jobs aren't counted yet, because the owner hasn't put minutes on the part a tool would take.</p>
+      <p class="sum">The money math in the sample: 6.6 hours a week (the owner's 5.1 at $100 an hour, his lead tech's 1.5 at $40) is worth up to $570.00 a week. Over a month (4.33 weeks), less $199 for Tekmetric, that's up to an estimated $2,269.10 a month in recovered time once it's running. Accounting Link's price and setup fee aren't published, so they're not in that number. It's an estimate: the minutes and rates are the owner's, and how much each tool takes off is my reading. Three more jobs aren't counted yet, because the owner hasn't put minutes on the part a tool would take.</p>
       <p class="wm">The shop, its people, hours and rates are made up. The tool prices are as read on October 6, 2026. Every real report is built from your discovery call, with your own numbers.</p>
       <a class="sample-link" href="sample-report.html">See the full sample report (fictional business) →</a>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <span class="kicker">The process</span>
+    <h2 class="sec">How it works</h2>
+    <p class="lead" style="font-size:16.5px">Your time on calls: about ninety minutes across three calls (15, 45 and 30 minutes), plus your included hour of setup help. Your written report is checked over by a competent human in the loop, and it arrives before your walkthrough call, which is scheduled when you book the paid service. The quick-start plan asks for ten minutes a day for four days. A bigger switch, like moving off paper, happens on a day you pick.</p>
+    <div class="steps">
+      <a class="step" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">
+        <span class="n">Step 1 · Free</span>
+        <h3>The free 15-minute call</h3>
+        <p>A short video call about how your week goes. I name the one fix I'd start with for your business. If that's all you want, keep it with my blessing.</p>
+        <span class="t">15 min · $0 · book this one →</span>
+      </a>
+      <div class="step">
+        <span class="n">Step 2</span>
+        <h3>The discovery call</h3>
+        <p>A 45-minute interview. I count the hours with you: how often each task hits, how long it takes, what your hour is worth. Nothing goes on the list unless you hear the math and say yes out loud.</p>
+        <span class="t">45 min · part of the $999</span>
+      </div>
+      <div class="step">
+        <span class="n">Step 3</span>
+        <h3>Your written report</h3>
+        <p>Nine pages. Every pain point a tool can fix, mapped to a specific tool with its price (when the maker publishes one), setup time, and hours returned, plus a 4-day quick-start plan: ten minutes a day, in a set order.</p>
+        <span class="t">arrives before your walkthrough</span>
+      </div>
+      <div class="step">
+        <span class="n">Step 4</span>
+        <h3>The walkthrough</h3>
+        <p>Your report is already in your inbox. We walk it together for 30 minutes, run the money math with your numbers, and flag the install-order traps before you spend a dollar on software.</p>
+        <span class="t">30 min · included</span>
+      </div>
+      <div class="step">
+        <span class="n">Step 5</span>
+        <h3>Your first setup hour</h3>
+        <p>Once your written report is delivered, your first hour of setup help on what it recommends is included. If you want more built after that, it's priced below.</p>
+        <span class="t">1 hour · included</span>
+      </div>
+    </div>
+    <div class="center" style="margin-top:36px">
+      <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
     </div>
   </div>
 </section>
@@ -554,7 +618,7 @@
   <div class="wrap">
     <span class="kicker">No "book a call to find out"</span>
     <h2 class="sec">Pricing</h2>
-    <p class="prices-intro">One honest constraint before the numbers: I run every discovery and walkthrough call myself, which caps how many clients I can take in a week. The booking calendar shows exactly what's open. When it's full, it's full.</p>
+    <p class="prices-intro">One honest constraint before the numbers: every discovery, walkthrough and setup call is run by me or someone trained in my method and process, which caps how many clients I can take in a week. The booking calendar shows exactly what's open. When it's full, it's full.</p>
     <div class="prices">
       <div class="price feature">
         <span class="tag">Start here</span>
@@ -566,10 +630,11 @@
           <li>Your nine-page written report</li>
           <li>4-day quick-start plan</li>
           <li>30-minute walkthrough, math run live</li>
+          <li>Your first hour of setup help, after your report is delivered</li>
           <li>Backed by the written guarantee above</li>
         </ul>
         <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
-        <p class="note">The guarantee's floor is five reclaimable hours a week, counted from time estimates you confirm out loud, never ones I make for you. What those hours are worth is your own rate times the fixes you actually put in, and your report runs that math with your own time estimates and hourly rates. And if you hire me for the First Shift Build or an eligible custom build from your report, the full $999 credits toward it, as my terms page says. The paid service always starts with the free 15-minute call; you never pay before you've met me.</p>
+        <p class="note">If you hire me for the First Shift Build or an eligible custom build from your report, the full $999 credits toward it, as my terms page says. The paid service always starts with the free 15-minute call; you never pay before you've met me.</p>
       </div>
       <div class="price">
         <span class="tag">If you want it built for you</span>
@@ -600,29 +665,9 @@
   </div>
 </section>
 
-<section class="straight">
-  <div class="wrap">
-    <span class="kicker">Fair question</span>
-    <h2 class="sec">Why trust me?</h2>
-    <div class="cols">
-      <div>
-        <h3>What you won't find on this page</h3>
-        <p>No stock testimonials. No star ratings from reviewers who don't exist. No logos of publications that have never heard of me. I'm building this company in person, across Napa, Solano and Sonoma counties, and I'm early: if you book, you'll be one of my first clients, and I'll tell you exactly which number when you ask.</p>
-        <p>That cuts both ways, so here's the deal it buys you: I answer my own phone, I run your calls myself, and I have more riding on your report being good than you do. When my first clients have results, you'll see them here, real names, shared with written permission. Until then, I'd rather show you nothing than make something up.</p>
-      </div>
-      <div>
-        <h3>What holds me accountable instead</h3>
-        <div class="plate" style="margin-bottom:12px"><h4>The refund is the review.</h4><p>The guarantee above isn't marketing; it's the exact text on my terms page, in writing before you pay. If the honest count comes in under five hours, it costs me $999 and the afternoon it takes to say so.</p></div>
-                <div class="plate" style="margin-bottom:12px"><h4>Counted with you, out loud.</h4><p>Every hour in your report starts from time you confirmed out loud on our discovery call. How much of each job a tool takes off is my reading of what you told me. If a tool only speeds up part of a job, it counts up to the minutes you gave for that part, and the report says "up to". A part you never put minutes on isn't counted yet. Hours round down, never up.</p></div>
-        <div class="plate"><h4>One name on all of it.</h4><p>You meet me first, on a video call or in person, before a dollar moves. Every letter carries my name, and the number on this page rings through to me. Harder to disappear than an ad account.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="founder">
   <div class="wrap">
-    <div class="ph"><img src="photos/lucas.jpg" alt="Lucas Vegvary, founder of The Local AI Shop" onerror="this.remove()"><span class="initials" aria-hidden="true">LV</span></div>
+    <div class="ph"><img src="photos/lucas.jpg" alt="Lucas Vegvary, founder of The Local AI Shop" width="800" height="800" onerror="this.remove()"><span class="initials" aria-hidden="true">LV</span></div>
     <div class="bio">
       <span class="kicker">Who's behind this</span>
       <h2 class="sec" style="font-size:28px">Lucas Vegvary, founder.</h2>
@@ -632,6 +677,26 @@
       <p>Every price in your report is checked on the tool's own pricing page the day the report ships, for the plan that fits a business your size. Next to each pick, you'll see why I chose it and what I passed on.</p>
       <p style="font-size:14px;color:var(--muted)">If someone shows up claiming to be me, tell me at <a href="mailto:lucas@localaishop.com">lucas@localaishop.com</a><span class="needs-phone"> or <a href="tel:+17079401306">(707) 940-1306</a></span>. Nobody knocks under my name but me.</p>
     </div>
+  </div>
+</section>
+
+<section class="straight">
+  <div class="wrap">
+    <span class="kicker">Fair question</span>
+    <h2 class="sec">Why trust me?</h2>
+    <div class="cols">
+      <div>
+        <h3>What you can check before you pay</h3>
+        <div class="plate" style="margin-bottom:12px"><h4>You meet me first.</h4><p>On a video call or in person, before a dollar moves. Every letter carries my name, and the number on this page rings through to me. Harder to disappear than an ad account.</p></div>
+        <div class="plate"><h4>You can check my judgment.</h4><p>The sample report shows what I passed on, not just what I picked. The fictional shop had tried a system at $400-something a month on a year contract. I picked Tekmetric's $199 Start plan and passed on its $349 Grow plan, which adds a labor guide the owner already pays for (prices as read October 6, 2026). Your report shows the same reasoning for every pick. <a href="sample-report.html">Read the sample</a></p></div>
+      </div>
+      <div>
+        <h3>What holds me accountable</h3>
+        <div class="plate" style="margin-bottom:12px"><h4>The refund is the review.</h4><p>The guarantee above isn't marketing; it's the exact text on my terms page, in writing before you pay. If the honest count comes in under five hours, it costs me $999 and the afternoon it takes to say so.</p></div>
+                <div class="plate"><h4>Counted with you, out loud.</h4><p>Every hour in your report starts from time you confirmed out loud on our discovery call. How much of each job a tool takes off is my reading of what you told me. If a tool only speeds up part of a job, it counts up to the minutes you gave for that part, and the report says "up to". A part you never put minutes on isn't counted yet. Hours round down, never up.</p></div>
+      </div>
+    </div>
+    <p class="early">What you won't find here: stock testimonials or star ratings from reviewers who don't exist. I'm early, so if you book, you'll be one of my first clients, and I'll tell you exactly which number when you ask. When my first clients have results, you'll see them here, real names, shared with written permission.</p>
   </div>
 </section>
 
@@ -659,6 +724,10 @@
     <details class="q">
       <summary>When do I get my written report?</summary>
       <div class="a">Before your walkthrough call. The walkthrough is scheduled when you book the paid service, and your report lands in your inbox ahead of it, so you can read it first and bring questions.</div>
+    </details>
+    <details class="q">
+      <summary>What happens after my report is delivered?</summary>
+      <div class="a">Your walkthrough, and your first hour of setup help on what the report recommends, both included in the $999. If you want more built after that, the First Shift Build has a fixed price on this page, and anything bigger is quoted in writing.</div>
     </details>
     <details class="q">
       <summary>Aren't we too small for this?</summary>
@@ -692,6 +761,7 @@
     <h2>Put a rough number on your second shift. Free.</h2>
     <p>Your business, not a demo. Worst case, you leave with one idea to keep. Best case, it's where getting your evenings back starts.</p>
     <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
+    <span class="sub-note" style="color:#8d96a1">After you pick a time: your name, five quick yes/no questions, then your phone and email.</span>
     <span class="sub-note needs-phone" style="color:#8d96a1">Or call <a class="tel" href="tel:+17079401306">(707) 940-1306</a>. It rings through to me.</span>
   </div>
 </section>

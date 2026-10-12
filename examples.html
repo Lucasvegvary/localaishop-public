@@ -39,6 +39,9 @@
   .btn:hover{background:var(--accent-deep)}
   .sub-note{display:block;margin-top:12px;font-size:14px;color:var(--muted)}
 
+  .skip{position:absolute;left:-9999px;top:0;z-index:100;background:#fff;color:var(--ink);padding:10px 16px;border-radius:0 0 10px 0;font-weight:700;font-size:15px;text-decoration:none}
+  .skip:focus{left:0}
+
   /* nav (same as the home page, trimmed) */
   nav{position:sticky;top:0;z-index:50;background:rgba(17,20,24,.93);backdrop-filter:blur(8px);color:#fff}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px;max-width:1080px}
@@ -105,6 +108,8 @@
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to main content</a>
+
 <nav>
   <div class="wrap">
     <a class="logo" href="index.html">The Local AI Shop<span>.</span></a>
@@ -119,6 +124,7 @@
     <span class="kicker">Practical examples, by trade</span>
     <h1>What this can look like in a business like yours</h1>
     <p class="lead">Every trade has its own second shift: the calls, quotes, reminders and invoices that wait for you after the trucks are parked. Below are everyday examples from the trades I write to across Napa, Solano and Sonoma, each one matched with the kind of tool that usually handles it. Find your trade and skim.</p>
+    <p class="lead more">These are just a few examples. There are many more ways AI can help a shop like yours, and the 15-minute call is where we find the ones that fit your week.</p>
     <div class="honest">
       <b>These are examples, not results.</b>
       Nothing here is a client story, a statistic or a promise. You won't find hours saved or dollars saved, because those belong to a real business, and I'd rather count yours with you than guess.
@@ -328,7 +334,7 @@
     <p>Here is how I'd find out for your business:</p>
     <ol class="steps">
       <li>On a free 15-minute video call, you tell me how a normal week runs. I'll name the one fix I'd start with for the task eating the most of your time, and the idea is yours to keep whether or not we ever work together.</li>
-      <li>If you want me to go deeper after that, I'll tell you about my paid service ($999), and you decide. In it, I count your after-hours office time with you, find the pieces a boring, proven tool can take, and hand you a written plan, checked over by a competent human in the loop.</li>
+      <li>If you want me to go deeper after that, I'll tell you about my paid service ($999), and you decide. In it, I count your after-hours office time with you, find the pieces a boring, proven tool can take, and hand you a written plan, checked over by a competent human in the loop. Your first hour of setup help, after the plan is delivered, is included.</li>
     </ol>
     <p><a class="text-link" href="sample-report.html">See a sample of the written plan a paying client gets (a made-up business) →</a></p>
     <p>The guarantee and its conditions are on the <a class="text-link" href="index.html">home page</a>, word for word.</p>
@@ -340,6 +346,7 @@
     <h2>Want to know where your shop would start?</h2>
     <p>Bring your trade and a normal week. I'll name the one fix I'd start with.</p>
     <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
+    <span class="sub-note">After you pick a time: your name, five quick yes/no questions, then your phone and email.</span>
     <span class="sub-note needs-phone">Prefer to talk? Call <a class="tel" href="tel:+17079401306">(707) 940-1306</a>. It rings through to me.</span>
   </div>
 </section>

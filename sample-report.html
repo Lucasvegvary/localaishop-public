@@ -5,7 +5,7 @@
 <title>Sample report (fictional business): The Local AI Shop</title>
 <meta name="robots" content="noindex, follow">
 <meta name="description" content="A sample report for a fictional business with made-up hours and rates, for illustration only.">
-<meta name="viewport" content="width=1120">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root{
     --accent:#F06000;
@@ -132,6 +132,86 @@
   @media print{
     body{padding-top:0}
     .screen-banner{display:none}
+  }
+
+  /* ---- screen only from here: print is untouched ---- */
+
+  /* WCAG AA: the bright orange (3.0-3.3:1 on white/soft) stays on bars, borders and the dark title slide;
+     orange TEXT and the white-on-orange pill use the site's deeper orange (--accent-deep on the homepage). */
+  @media screen{
+    :root{--accent-text:#a84200;--good-text:#0b7a46}
+    .kicker,.accent,.arrow,.day .d,.sample-mark{color:var(--accent-text)}
+    .title-slide .kicker{color:var(--accent)}
+    .pill{background:var(--accent-text)}
+    .guarantee{color:var(--good-text)}
+    html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  }
+
+  /* Narrower than the 11-inch slide: slides flow as a column that fits the screen. */
+  @media screen and (max-width:1120px){
+    body{padding-top:0}
+    .screen-banner{position:sticky;top:0;font-size:11px;letter-spacing:.04em;line-height:1.4;padding:8px 12px}
+    .slide{width:auto;height:auto;overflow:visible;margin:12px 8px;padding:26px 32px 24px}
+    .sample-mark{position:static;align-self:flex-start;max-width:100%;margin:0 0 16px;font-size:10.5px;line-height:1.4}
+    .slide footer{position:static;margin-top:26px;padding-top:12px;border-top:1px solid var(--line);flex-wrap:wrap;gap:4px 16px;font-size:10px}
+    .slide::after{width:78%;white-space:normal;text-align:center;line-height:1.25;font-size:clamp(15px,3.2vw,28px)}
+    .slide > [style*="margin-top:auto"]{margin-top:18px !important}
+    .title-slide{min-height:420px}
+    .title-slide .logo{margin-bottom:32px}
+    .title-slide .meta{flex-wrap:wrap;gap:18px 32px;margin-top:28px}
+    h1{font-size:38px}
+    .grid4{grid-template-columns:1fr 1fr}
+    .matrix{grid-template-rows:auto auto;flex:none}
+    .tool-card .row{flex-wrap:wrap;gap:6px 12px}
+    .tool-card .facts{flex-wrap:wrap;gap:10px 24px}
+    .tool-card .facts > div{flex:1 1 150px}
+    .tool-card .facts > div:last-child{flex-basis:100%}
+    .roi-line{flex-wrap:wrap;gap:6px 10px}
+  }
+
+  /* Phones: one column, tables that fit with no sideways scroll. */
+  @media screen and (max-width:760px){
+    .slide{margin:10px 6px;padding:22px 18px 20px}
+    h1{font-size:30px}
+    h2{font-size:22px;line-height:1.2}
+    p{font-size:14px}
+    .slide p[style*="font-size:11px"]{font-size:12px !important}
+    .kicker{font-size:12px}
+    .stat{font-size:30px}
+    .stat small{font-size:13px}
+    .grid2,.grid3,.grid4,.matrix{grid-template-columns:1fr}
+    .q .tag,.axis,.estimate-label{font-size:11px}
+    .day .d{font-size:12px}
+    .day .t{font-size:12px}
+    .tool-card .facts{flex-direction:column;flex-wrap:nowrap;gap:10px}
+    .tool-card .facts > div{flex:none}
+    .tool-card .facts{font-size:13px}
+    .tool-card .facts b{font-size:10px}
+    .roi-line{flex-direction:column;align-items:flex-start;gap:2px;font-size:14px}
+    .roi-line .arrow{padding:0;font-size:18px;line-height:1.1}
+    .roi-line .big{font-size:24px}
+    .guarantee{font-size:13px}
+    table{font-size:12.5px}
+    th{font-size:10px}
+    table:not(.qw):not(.stack) th,table:not(.qw):not(.stack) td{padding:7px 4px}
+    table.qw,table.qw tbody,table.qw tr,table.qw td,
+    table.stack,table.stack tbody,table.stack tr,table.stack td{display:block}
+    table.qw tr:first-child,table.stack tr:first-child{display:none}
+    table.qw tr{display:grid;grid-template-columns:auto 1fr;column-gap:8px}
+    table.qw td{border:0;padding:0}
+    table.qw td:first-child{grid-column:1/-1;padding-top:14px;font-weight:600}
+    table.qw td.arrow{padding:3px 0 0}
+    table.qw td:nth-child(3){padding-top:3px}
+    table.qw td:nth-child(4){grid-column:2;padding-top:2px;font-size:12px;color:var(--muted)}
+    table.qw td:nth-child(4)::before{content:"Hours back / wk: "}
+    table.qw td.why{grid-column:1/-1;padding:6px 0 14px;border-bottom:1px solid var(--line);font-size:12px;line-height:1.5}
+    table.stack tr{padding:14px 0;border-bottom:1px solid var(--line)}
+    table.stack td{border:0;padding:3px 0}
+    table.stack td:nth-child(1){font-size:15px}
+    table.stack td:nth-child(2)::before,table.stack td:nth-child(3)::before{
+      display:block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:8px 0 2px}
+    table.stack td:nth-child(2)::before{content:"What it would do"}
+    table.stack td:nth-child(3)::before{content:"Why it's not a quick win"}
   }
 </style>
 <script src="carry.js" defer></script>
@@ -282,7 +362,7 @@
   <div class="kicker">06 · After the Quick Wins</div>
   <h2>The bigger opportunities I found (for when you're ready)</h2>
   <div class="bar"></div>
-  <table>
+  <table class="stack">
     <tr><th>Opportunity</th><th>What it would do</th><th>Why it's not a quick win</th></tr>
     <tr><td><b>The drawer of estimates</b></td><td>A short monthly list of the estimates and declined work worth one more call, pulled from Tekmetric's declined-job history instead of a drawer.</td><td>You said the drawer holds hundreds, going back years. Sorting what is worth a call is a project, and it needs your tickets in Tekmetric first.</td></tr>
     <tr><td><b>No-shows</b></td><td>A reminder for each appointment, priced against what an empty bay costs you.</td><td>Nobody has priced a no-show yet, and Tekmetric's own reminders cost more than Brenda's calls do. Once Denise gives me your average ticket, I can tell you if a reminder pays.</td></tr>
@@ -311,11 +391,11 @@
     <tr><td><b>All of it, blended</b></td><td><b>6.6</b></td><td><b>$86.36</b></td><td><b>$570.00</b></td></tr>
   </table>
   <div class="grid3" style="margin-top:10px">
-    <div class="card"><div class="stat">$2,269.10<small>net each month, once it's running, before Accounting Link's price and setup fee</small></div></div>
+    <div class="card"><div class="stat">$2,269.10<small>value of recovered time each month, less known tool costs, before Accounting Link's price and setup fee</small></div></div>
     <div class="card"><div class="stat">$27,229.20<small>over 12 months at that pace</small></div></div>
     <div class="card"><div class="stat">28.5<small>hours back in your month</small></div></div>
   </div>
-  <p class="estimate-label">Estimate: your times and rates are your own confirmed numbers; how much each tool takes off is my reading of what you told me; tool prices read on October 6, 2026. Net is before Accounting Link, whose price and setup fee are not published.</p>
+  <p class="estimate-label">Estimate: your times and rates are your own confirmed numbers; how much each tool takes off is my reading of what you told me; tool prices read on October 6, 2026. That monthly figure is before Accounting Link, whose price and setup fee are not published.</p>
   <div class="guarantee" style="margin-top:auto">My guarantee, word for word from my terms page: "<span class="g-sentence">If, after your 45-minute conversation, we can't document at least five reclaimable hours a week in your business — honest, non-duplicative hours you confirm — you still receive your full Shift Sheet AND we refund the $999.</span>" <span class="g-conditions">How we count, and the only conditions: the hours come from time estimates you confirm out loud on your discovery call, itemized per tool in your Shift Sheet, with no task counted twice. Claim window: 30 days from the day your Shift Sheet is delivered. Refunds go to your original payment method; we start the refund ourselves, and how quickly it posts depends on your card issuer.</span></div>
   <footer><span>The Local AI Shop · The Shift Sheet</span><span>Sample: fictional business, made-up hours and rates</span><span>Riverbend Auto Repair · 8 / 9</span></footer>
 </section>
