@@ -3,16 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Local AI Shop, Napa and Solano: You work two jobs. Let's shrink the second one.</title>
-<meta name="description" content="A human-verified assessment and action plan for the work you still do by hand after close. Owner-run home and trade service businesses in Napa, Solano and Sonoma. $999 flat, guarantee and conditions in writing.">
+<title>The Local AI Shop: AI help for Napa, Solano &amp; Sonoma trades</title>
+<meta name="description" content="AI help for owner-run home and trade service businesses in Napa, Solano and Sonoma. Free 15-minute call first, then a $999 written report and walkthrough.">
 <link rel="canonical" href="https://localaishop.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="preload" as="image" href="photos/napa-balloons-hero.jpg" fetchpriority="high">
 <meta name="theme-color" content="#111418">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Local AI Shop">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://localaishop.com/">
-<meta property="og:title" content="The Local AI Shop: You work two jobs. Let's shrink the second one.">
-<meta property="og:description" content="A human-verified assessment and action plan for the work you still do by hand after close. Owner-run home and trade service businesses in Napa, Solano and Sonoma. $999 flat, guarantee and conditions in writing.">
+<meta property="og:title" content="The Local AI Shop: AI help for Napa, Solano and Sonoma trades">
+<meta property="og:description" content="AI help for owner-run home and trade service businesses in Napa, Solano and Sonoma. Free 15-minute call first, then a $999 written report and walkthrough.">
 <meta property="og:image" content="https://localaishop.com/photos/napa-balloons-hero.jpg">
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="1066">
@@ -31,11 +33,28 @@
       "publisher": { "@id": "https://localaishop.com/#business" }
     },
     {
+      "@type": "WebPage",
+      "@id": "https://localaishop.com/#webpage",
+      "url": "https://localaishop.com/",
+      "name": "The Local AI Shop: AI help for Napa, Solano and Sonoma trades",
+      "description": "AI help for owner-run home and trade service businesses in Napa, Solano and Sonoma. Free 15-minute call first, then a $999 written report and walkthrough.",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://localaishop.com/#website" },
+      "about": { "@id": "https://localaishop.com/#business" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://localaishop.com/photos/napa-balloons-hero.jpg",
+        "width": 1600,
+        "height": 1066
+      }
+    },
+    {
       "@type": "ProfessionalService",
       "@id": "https://localaishop.com/#business",
       "name": "The Local AI Shop",
       "url": "https://localaishop.com/",
-      "description": "A human-verified assessment and action plan for the work you still do by hand after close. Owner-run home and trade service businesses in Napa, Solano and Sonoma. $999 flat, guarantee and conditions in writing.",
+      "description": "The Local AI Shop helps owner-run home and trade service businesses in Napa, Solano and Sonoma counties, California. It starts with a free 15-minute call. The paid service is $999 and ends in a written report and a walkthrough.",
+      "image": "https://localaishop.com/photos/lucas.jpg",
       "email": "lucas@localaishop.com",
       "telephone": "+17079401306",
       "address": {
@@ -45,6 +64,12 @@
         "addressRegion": "CA",
         "postalCode": "94558",
         "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+17079401306",
+        "email": "lucas@localaishop.com"
       },
       "areaServed": [
         { "@type": "AdministrativeArea", "name": "Napa County, California" },
@@ -59,18 +84,30 @@
         { "@type": "City", "name": "Vacaville, California" },
         { "@type": "City", "name": "Dixon, California" }
       ],
-      "founder": { "@type": "Person", "name": "Lucas Vegvary", "jobTitle": "Founder" },
+      "founder": { "@id": "https://localaishop.com/#founder" },
+      "parentOrganization": { "@type": "Organization", "name": "My Custom Sleep Journey LLC" },
+      "knowsAbout": [
+        "AI tools for home and trade service businesses",
+        "Office work after close: email, scheduling, quotes and follow-up",
+        "Keeping a human in the loop when a business uses AI"
+      ],
       "makesOffer": [
         {
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "USD",
-          "itemOffered": { "@type": "Service", "name": "The free 15-minute call" }
+          "url": "https://localaishop.com/#how",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "The free 15-minute call",
+            "description": "A short video call about how your week goes. I name the one fix I'd start with for your business."
+          }
         },
         {
           "@type": "Offer",
           "price": "999",
           "priceCurrency": "USD",
+          "url": "https://localaishop.com/#pricing",
           "itemOffered": {
             "@type": "Service",
             "name": "The $999 paid service",
@@ -81,9 +118,20 @@
           "@type": "Offer",
           "price": "2900",
           "priceCurrency": "USD",
+          "url": "https://localaishop.com/#pricing",
           "itemOffered": { "@type": "Service", "name": "The First Shift Build" }
         }
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://localaishop.com/#founder",
+      "name": "Lucas Vegvary",
+      "jobTitle": "Founder",
+      "url": "https://localaishop.com/#founder",
+      "image": "https://localaishop.com/photos/lucas.jpg",
+      "description": "Founder of The Local AI Shop. Lives and works in Napa County. Background in sales and technology.",
+      "worksFor": { "@id": "https://localaishop.com/#business" }
     },
     {
       "@type": "FAQPage",
@@ -91,18 +139,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Why did you mail me a letter?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "So it can be about your shop and nobody else's. Each letter starts from notes on what your business already shows the public, mostly your own website. AI tools help gather those notes, and a competent human in the loop checks them before anything goes in the mail. A letter also waits until you have a minute. If I follow up with a call, say stop and I'll stop. And if anything in the letter is wrong, you know exactly whose name is on it."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Is the free 15 minutes a sales call?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It is a working conversation, not a generic demo. I look at how you run things and give you one specific idea you can keep. At the end, if my paid service looks useful, I'll ask whether you want it. The price and guarantee are already printed on this page."
+            "text": "It is a working conversation, not a generic demo. I look at how you run things and name one tool you could go set up, with its price and setup time. At the end, if my paid service looks useful, I'll ask whether you want it. The price and guarantee are already printed on this page."
           }
         },
         {
@@ -110,7 +150,7 @@
           "name": "We already use ChatGPT. Do we still need this?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Good, you've already tried one tool. The assessment looks at the office-side work around it: email, scheduling, quotes, follow-up, and the pile that sits and waits for you. In the free 15 minutes, I look at one workflow with you and give you one practical idea to keep."
+            "text": "Good, you've already tried one tool. The assessment looks at the office-side work around it: email, scheduling, quotes, follow-up, and the pile that sits and waits for you. In the free 15 minutes, I look at one workflow with you and name one tool for it, with its price and setup time."
           }
         },
         {
@@ -131,6 +171,14 @@
         },
         {
           "@type": "Question",
+          "name": "How long does the whole thing take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three calls and one setup hour. The free 15 minutes first. Then the 45-minute discovery call, when the calendar has room. Your report lands in your inbox before the 30-minute walkthrough, which is scheduled when you book. The setup hour is whenever you're ready after that. The quick-start plan is ten minutes a day for four days. A bigger switch, like moving off paper, happens on a day you pick."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "What happens after my report is delivered?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -142,7 +190,7 @@
           "name": "Aren't we too small for this?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Small is exactly who this is for. I work with owner-run home and trade service businesses across Napa, Solano and Sonoma counties, HVAC, plumbing, electrical, roofing, remodeling, landscaping, cleaning, pest control and auto repair, roughly 2 to 20 people. Big companies have IT departments; you've got you. Five hours a week back matters more at your size, not less."
+            "text": "Small is exactly who this is for. I work with owner-run home and trade service businesses across Napa, Solano and Sonoma counties, HVAC, plumbing, electrical, roofing, remodeling, landscaping, cleaning, pest control and auto repair, roughly 2 to 20 people. In person across those three counties, by video call anywhere in the Bay Area. Big companies have IT departments; you've got you. Five hours a week back matters more at your size, not less."
           }
         },
         {
@@ -158,7 +206,15 @@
           "name": "I don't really trust AI. Why should I do this?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "If AI has felt like it wasn't built for a business like yours, that's not you being behind. It has mostly been sold in a language from another planet, by people who have never run a shop. Healthy instinct: a lot of what's out there is hype. The job is filtering that noise down to as few tools as the work needs: boring, proven, and worth your money. A lot of what I recommend is plain software with no AI in it at all. Whatever fixes the problem. Nothing experimental goes near your business. The AI is the wrench, not the job. You're not buying artificial intelligence. You're buying your Tuesday nights back."
+            "text": "You shouldn't trust it blindly, and I don't either. A lot of what's sold to small businesses is hype, and the tools keep changing. Keeping up with AI is what I do, so you don't have to. I only recommend tools that have held up, each with the reason it fits your business. Nothing goes on the list unless you hear the math and say yes out loud. The AI is the wrench, not the job. You're not buying artificial intelligence. You're buying your Tuesday nights back."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Plenty of AI companies say they can fix the same problems. What makes you different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "My commitment to every owner I work with: I'll always underpromise and overdeliver. My reputation matters, and around here a name travels by word of mouth. Integrity comes first in how I run this shop. Whatever you hire me for, my goal is the same: improve how your business runs as much as I possibly can."
           }
         },
         {
@@ -182,7 +238,15 @@
           "name": "Which tools do you push? Are you selling software?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "I'm not a software company, and no tool pays my bills; my paid service is my product. I favor boring, proven, off-the-shelf tools you could buy on your own tomorrow, including plain software with no AI when it fits better. Every price in your report is checked on the tool's own pricing page the day the report ships."
+            "text": "I'm not a software company, and no tool pays my bills; my paid service is my product. I pick the up-to-date AI and other software tools that fit how your business runs, all off the shelf, so you could buy any of them on your own tomorrow. Every price in your report is checked on the tool's own pricing page the day the report ships."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did you mail me a letter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "So it can be about your shop and nobody else's. Each letter starts from notes on what your business already shows the public, mostly your own website. AI tools help gather those notes, and a competent human in the loop checks them before anything goes in the mail. A letter also waits until you have a minute. If I follow up with a call, say stop and I'll stop. And if anything in the letter is wrong, you know exactly whose name is on it."
           }
         }
       ]
@@ -436,6 +500,7 @@
       <a href="#guarantee">The guarantee</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">Questions</a>
+      <a href="notes/">Notes</a>
       <details class="mnav">
         <summary>Menu</summary>
         <div class="panel">
@@ -444,6 +509,7 @@
           <a href="#guarantee">The guarantee</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">Questions</a>
+          <a href="notes/">Notes on using AI</a>
           <a data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
         </div>
       </details>
@@ -457,13 +523,14 @@
 <header class="hero" id="top">
   <div class="wrap">
     <span class="kicker">Napa, Solano and Sonoma's local AI shop, for owner-run home and trade service businesses with 2 to 20 people</span>
-    <h1>You work two jobs. <em>Let's shrink the second one.</em></h1>
-    <p class="lead lead-a">I do the AI shopping for your business: current prices, which tools fit, and why. Start with a free 15-minute call and one practical idea to keep. If you want to go deeper, the $999 service includes a discovery call, written report, walkthrough, and your first hour of setup help after the report is delivered.</p>
+    <h1>You work two jobs. <em>Let's end the second one.</em></h1>
+    <p class="lead lead-a">I do the AI shopping for your business: current prices, which tools fit, and why. Start with a free 15-minute call and leave with one tool named for the task eating the most of your week, with its price and setup time. Going deeper is $999: discovery call, written report, walkthrough, and your first hour of setup help.</p>
     <div class="ctas">
       <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
       <a class="btn ghost" href="examples.html">See examples for your trade</a>
     </div>
     <span class="sub-note" style="color:#9aa3ad">After you pick a time: your name, five quick yes/no questions, then your phone and email.</span>
+    <p class="sub-note" style="display:flex;align-items:center;gap:10px;margin-top:14px;color:#c9d0d8"><img src="photos/lucas.jpg" alt="Lucas Vegvary" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none" loading="eager" decoding="async"><span><a href="#founder" style="color:inherit">Lucas Vegvary, Napa.</a> I answer the phone and run the free call myself.</span></p>
     <div class="strip">
       <div><p class="sh">Guaranteed in writing.</p><p>Five reclaimable hours a week, confirmed by you, or I refund the $999. You keep your written report either way. <a href="#guarantee">Read the exact wording</a>.</p></div>
       <div><p class="sh">$999, flat.</p><p>The interview, written report, walkthrough and your first hour of setup help. Stated up front because you'd find out anyway.</p></div>
@@ -511,7 +578,7 @@
       <span class="sub-note">This page isn't going anywhere if you'd rather read first.<span class="needs-phone"> Prefer to talk? Call <a href="tel:+17079401306" style="font-weight:700;color:var(--accent-deep)">(707) 940-1306</a>.</span></span>
     </div>
     <div>
-      <img src="photos/napa-welcome-sign.jpg" alt="The Welcome to Napa Valley sign beside the vineyards" width="1400" height="1050" loading="lazy">
+      <img src="photos/napa-welcome-sign.jpg" alt="The Welcome to Napa Valley sign beside the vineyards" width="1400" height="1050" loading="lazy" decoding="async">
       <p class="cap">The sign says welcome. I take it literally.</p>
     </div>
   </div>
@@ -634,7 +701,7 @@
           <li>Backed by the written guarantee above</li>
         </ul>
         <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
-        <p class="note">If you hire me for the First Shift Build or an eligible custom build from your report, the full $999 credits toward it, as my terms page says. The paid service always starts with the free 15-minute call; you never pay before you've met me.</p>
+        <p class="note">If you hire me for the First Shift Build or a custom build quoted from your report, the full $999 credits toward it, as my terms page says. The paid service always starts with the free 15-minute call; you never pay before you've met me.</p>
       </div>
       <div class="price">
         <span class="tag">If you want it built for you</span>
@@ -652,7 +719,7 @@
       <div class="price">
         <span class="tag">If you want a partner</span>
         <h3>AI Concierge</h3>
-        <div class="amount">Scoped to you <small>quoted monthly, in writing</small></div>
+        <div class="amount">Scoped to you <small>and quoted monthly, in writing</small></div>
         <ul>
           <li>Working sessions on your real workflows, on a cadence you and I set in writing</li>
           <li>Voice-message access between sessions, answered within one business day</li>
@@ -662,18 +729,22 @@
         <p class="note">Your seat is scoped and quoted to your workflows, in writing. Cancel any month.</p>
       </div>
     </div>
+    <div class="plate" id="website" style="margin-top:28px;max-width:760px">
+      <h3 style="margin:0 0 8px">No website yet? I build one first.</h3>
+      <p style="margin:0">Some shops I write to have no website at all. For those I build one before we ever talk, so you can see it working before you decide anything. If you keep it, it's $0 up front and $99 a month, stop anytime, or $500 to own it outright. It's built so Google and the AI search tools can find you, and the site and its login are yours. Ask on the free call, or email <a href="mailto:lucas@localaishop.com">lucas@localaishop.com</a>.</p>
+    </div>
   </div>
 </section>
 
-<section class="founder">
+<section class="founder" id="founder">
   <div class="wrap">
-    <div class="ph"><img src="photos/lucas.jpg" alt="Lucas Vegvary, founder of The Local AI Shop" width="800" height="800" onerror="this.remove()"><span class="initials" aria-hidden="true">LV</span></div>
+    <div class="ph"><img src="photos/lucas.jpg" alt="Lucas Vegvary, founder of The Local AI Shop" width="800" height="800" loading="lazy" decoding="async" onerror="this.remove()"><span class="initials" aria-hidden="true">LV</span></div>
     <div class="bio">
       <span class="kicker">Who's behind this</span>
       <h2 class="sec" style="font-size:28px">Lucas Vegvary, founder.</h2>
       <p>I live and work in Napa County. My background is sales and technology: years selling internet and Ethernet connectivity, then Windows systems, then coaching. The common thread was sitting across from someone and working out what they actually needed.</p>
       <p>I started The Local AI Shop because local owners kept getting sold "AI" they didn't need, by people who never asked how they actually work. So that's where my work starts: how your week actually runs, in your words. Sometimes the right answer is a plain piece of software. Sometimes it's "don't buy that." The report says so either way.</p>
-      <p>When I do recommend a company, I lean toward established, well-reviewed ones. I do the homework with AI research tools under my own rules, starting with how long a company has been around and what its customers say on independent review sites. I also keep a vetted list of tools I've researched ahead of time; for companies on it, a second, separate check looks for red flags like lawsuits, data breaches and billing complaints. That's due diligence with a human in the loop: AI does the searching, and a competent human checks over your report before you see it.</p>
+      <p>When I do recommend a company, I lean toward established, well-reviewed ones. I do the homework with AI research tools under my own rules, starting with how long a company has been around and what its customers say on independent review sites. I also keep a vetted list of tools I've researched ahead of time; for companies on it, a second, separate check looks for red flags like lawsuits, data breaches and billing complaints. That's due diligence with a human in the loop: AI does the searching, and every page is checked by me or someone trained in my method before you see it.</p>
       <p>Every price in your report is checked on the tool's own pricing page the day the report ships, for the plan that fits a business your size. Next to each pick, you'll see why I chose it and what I passed on.</p>
       <p style="font-size:14px;color:var(--muted)">If someone shows up claiming to be me, tell me at <a href="mailto:lucas@localaishop.com">lucas@localaishop.com</a><span class="needs-phone"> or <a href="tel:+17079401306">(707) 940-1306</a></span>. Nobody knocks under my name but me.</p>
     </div>
@@ -696,7 +767,7 @@
                 <div class="plate"><h4>Counted with you, out loud.</h4><p>Every hour in your report starts from time you confirmed out loud on our discovery call. How much of each job a tool takes off is my reading of what you told me. If a tool only speeds up part of a job, it counts up to the minutes you gave for that part, and the report says "up to". A part you never put minutes on isn't counted yet. Hours round down, never up.</p></div>
       </div>
     </div>
-    <p class="early">What you won't find here: stock testimonials or star ratings from reviewers who don't exist. I'm early, so if you book, you'll be one of my first clients, and I'll tell you exactly which number when you ask. When my first clients have results, you'll see them here, real names, shared with written permission.</p>
+    <p class="early">What you won't find here: reviews from people who don't exist. I'm early, and I'd rather show you nothing than make something up. What you can check today: the sample report above, the guarantee in writing, and me, on the phone, before you pay. If you book, you'll be one of my first clients, and I'll tell you exactly which number when you ask. When my first clients have results, you'll see them here, real names, shared with written permission.</p>
   </div>
 </section>
 
@@ -706,16 +777,12 @@
     <h2 class="sec" style="margin-bottom:36px">Questions</h2>
 
     <details class="q">
-      <summary>Why did you mail me a letter?</summary>
-      <div class="a">So it can be about your shop and nobody else's. Each letter starts from notes on what your business already shows the public, mostly your own website. AI tools help gather those notes, and a competent human in the loop checks them before anything goes in the mail. A letter also waits until you have a minute. If I follow up with a call, say stop and I'll stop. And if anything in the letter is wrong, you know exactly whose name is on it.</div>
-    </details>
-    <details class="q">
       <summary>Is the free 15 minutes a sales call?</summary>
-      <div class="a">It is a working conversation, not a generic demo. I look at how you run things and give you one specific idea you can keep. At the end, if my paid service looks useful, I'll ask whether you want it. The price and guarantee are already printed on this page.</div>
+      <div class="a">It is a working conversation, not a generic demo. I look at how you run things and name one tool you could go set up, with its price and setup time. At the end, if my paid service looks useful, I'll ask whether you want it. The price and guarantee are already printed on this page.</div>
     </details>
     <details class="q">
       <summary>We already use ChatGPT. Do we still need this?</summary>
-      <div class="a">Good, you've already tried one tool. The assessment looks at the office-side work around it: email, scheduling, quotes, follow-up, and the pile that sits and waits for you. In the free 15 minutes, I look at one workflow with you and give you one practical idea to keep.</div>
+      <div class="a">Good, you've already tried one tool. The assessment looks at the office-side work around it: email, scheduling, quotes, follow-up, and the pile that sits and waits for you. In the free 15 minutes, I look at one workflow with you and name one tool for it, with its price and setup time.</div>
     </details>
     <details class="q">
       <summary>What if you can't find 5 hours in my business?</summary>
@@ -726,12 +793,16 @@
       <div class="a">Before your walkthrough call. The walkthrough is scheduled when you book the paid service, and your report lands in your inbox ahead of it, so you can read it first and bring questions.</div>
     </details>
     <details class="q">
+      <summary>How long does the whole thing take?</summary>
+      <div class="a">Three calls and one setup hour. The free 15 minutes first. Then the 45-minute discovery call, when the calendar has room. Your report lands in your inbox before the 30-minute walkthrough, which is scheduled when you book. The setup hour is whenever you're ready after that. The quick-start plan is ten minutes a day for four days. A bigger switch, like moving off paper, happens on a day you pick.</div>
+    </details>
+    <details class="q">
       <summary>What happens after my report is delivered?</summary>
       <div class="a">Your walkthrough, and your first hour of setup help on what the report recommends, both included in the $999. If you want more built after that, the First Shift Build has a fixed price on this page, and anything bigger is quoted in writing.</div>
     </details>
     <details class="q">
       <summary>Aren't we too small for this?</summary>
-      <div class="a">Small is exactly who this is for. I work with owner-run home and trade service businesses across Napa, Solano and Sonoma counties, HVAC, plumbing, electrical, roofing, remodeling, landscaping, cleaning, pest control and auto repair, roughly 2 to 20 people. Big companies have IT departments; you've got you. Five hours a week back matters more at your size, not less.</div>
+      <div class="a">Small is exactly who this is for. I work with owner-run home and trade service businesses across Napa, Solano and Sonoma counties, HVAC, plumbing, electrical, roofing, remodeling, landscaping, cleaning, pest control and auto repair, roughly 2 to 20 people. In person across those three counties, by video call anywhere in the Bay Area. Big companies have IT departments; you've got you. Five hours a week back matters more at your size, not less.</div>
     </details>
     <details class="q">
       <summary>Is there anyone you don't work with?</summary>
@@ -739,7 +810,11 @@
     </details>
     <details class="q">
       <summary>I don't really trust AI. Why should I do this?</summary>
-      <div class="a">If AI has felt like it wasn't built for a business like yours, that's not you being behind. It has mostly been sold in a language from another planet, by people who have never run a shop. Healthy instinct: a lot of what's out there is hype. The job is filtering that noise down to as few tools as the work needs: boring, proven, and worth your money. A lot of what I recommend is plain software with no AI in it at all. Whatever fixes the problem. Nothing experimental goes near your business. The AI is the wrench, not the job. You're not buying artificial intelligence. You're buying your Tuesday nights back.</div>
+      <div class="a">You shouldn't trust it blindly, and I don't either. A lot of what's sold to small businesses is hype, and the tools keep changing. Keeping up with AI is what I do, so you don't have to. I only recommend tools that have held up, each with the reason it fits your business. Nothing goes on the list unless you hear the math and say yes out loud. The AI is the wrench, not the job. You're not buying artificial intelligence. You're buying your Tuesday nights back.</div>
+    </details>
+    <details class="q">
+      <summary>Plenty of AI companies say they can fix the same problems. What makes you different?</summary>
+      <div class="a">My commitment to every owner I work with: I'll always underpromise and overdeliver. My reputation matters, and around here a name travels by word of mouth. Integrity comes first in how I run this shop. Whatever you hire me for, my goal is the same: improve how your business runs as much as I possibly can.</div>
     </details>
     <details class="q">
       <summary>Will AI end up running my business?</summary>
@@ -751,7 +826,11 @@
     </details>
     <details class="q">
       <summary>Which tools do you push? Are you selling software?</summary>
-      <div class="a">I'm not a software company, and no tool pays my bills; my paid service is my product. I favor boring, proven, off-the-shelf tools you could buy on your own tomorrow, including plain software with no AI when it fits better. Every price in your report is checked on the tool's own pricing page the day the report ships.</div>
+      <div class="a">I'm not a software company, and no tool pays my bills; my paid service is my product. I pick the up-to-date AI and other software tools that fit how your business runs, all off the shelf, so you could buy any of them on your own tomorrow. Every price in your report is checked on the tool's own pricing page the day the report ships.</div>
+    </details>
+    <details class="q">
+      <summary>Why did you mail me a letter?</summary>
+      <div class="a">So it can be about your shop and nobody else's. Each letter starts from notes on what your business already shows the public, mostly your own website. AI tools help gather those notes, and a competent human in the loop checks them before anything goes in the mail. A letter also waits until you have a minute. If I follow up with a call, say stop and I'll stop. And if anything in the letter is wrong, you know exactly whose name is on it.</div>
     </details>
   </div>
 </section>
@@ -759,7 +838,7 @@
 <section class="final">
   <div class="wrap">
     <h2>Put a rough number on your second shift. Free.</h2>
-    <p>Your business, not a demo. Worst case, you leave with one idea to keep. Best case, it's where getting your evenings back starts.</p>
+    <p>Your business, not a demo. Worst case, you leave with one tool named, priced and sized for your week. Best case, it's where getting your evenings back starts.</p>
     <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
     <span class="sub-note" style="color:#8d96a1">After you pick a time: your name, five quick yes/no questions, then your phone and email.</span>
     <span class="sub-note needs-phone" style="color:#8d96a1">Or call <a class="tel" href="tel:+17079401306">(707) 940-1306</a>. It rings through to me.</span>
@@ -773,13 +852,13 @@
     <div>
       <b>Lucas Vegvary · The Local AI Shop</b><br>
       Napa, California<span class="needs-phone"> · <a href="tel:+17079401306">(707) 940-1306</a></span> · <a href="mailto:lucas@localaishop.com">lucas@localaishop.com</a><br>
-      Serving Napa, American Canyon, Calistoga, Vallejo, Benicia, Fairfield, Vacaville, Dixon and nearby towns.<br>
+      Based in Napa. In person across Napa, Solano and Sonoma counties: Napa, American Canyon, Calistoga, Vallejo, Benicia, Fairfield, Vacaville, Dixon, Sonoma, Petaluma, Rohnert Park, Santa Rosa and nearby towns. By video call anywhere in the Bay Area.<br>
       Mail: 3325 Jefferson St #1131, Napa, CA 94558<br>
-      The Local AI Shop is operated by My Custom Sleep Journey LLC · Napa County, California<br>
-      Charges appear on your card statement as MCSJ LLC.
+      The Local AI Shop is operated by My Custom Sleep Journey LLC, the company I formed for an earlier business · Napa County, California<br>
+      Charges appear on your card statement as LOCAL AI SHOP.
     </div>
     <div class="legal">
-      Appointment texts are sent only with your consent, only about your booking. Reply STOP anytime to opt out, HELP for help. Discovery calls are recorded only with your spoken permission; recordings exist to build your report, are never sold, and are deleted 30 days after your report is delivered (working transcripts after 90 days, final reports after 12 months) or on request. Details: <a href="privacy.html">privacy policy &amp; SMS terms</a> · <a href="terms.html">terms, guarantee &amp; refund policy</a>. Guarantee terms as written above and on the terms page.<br><br>
+      Appointment texts are sent only with your consent, only about your booking. Reply STOP anytime to opt out, HELP for help. Discovery calls are recorded only with your spoken permission; recordings exist to build your report, are never sold, and are deleted 30 days after your report is delivered (working transcripts after 90 days, final reports after 12 months) or on request. Notes: <a href="notes/">using AI the right way</a> · <a href="examples.html">Practical examples by trade</a> · Details: <a href="privacy.html">privacy policy &amp; SMS terms</a> · <a href="terms.html">terms, guarantee &amp; refund policy</a>. Guarantee terms as written above and on the terms page.<br><br>
       Photography: <a href="https://commons.wikimedia.org/wiki/File:Ballooning_In_Napa_(129976155).jpeg" rel="noopener">hot-air balloons over Napa</a> by Ilya Grigorik (<a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license noopener">CC BY-SA 3.0</a>, resized) · <a href="https://commons.wikimedia.org/wiki/File:Welcome_to_Napa_Valley.jpg" rel="noopener">Welcome to Napa Valley sign</a> by DestinationFearFan (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>, resized) · <a href="https://commons.wikimedia.org/wiki/File:Atlas_Peak_vineyards_Napa_Valley.jpg" rel="noopener">Napa Valley vineyards</a> by Deb Harkness (<a href="https://creativecommons.org/licenses/by/2.0/" rel="license noopener">CC BY 2.0</a>, toned). Real photographs; nothing on this page is AI-generated imagery.
     </div>
   </div>

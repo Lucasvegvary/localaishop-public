@@ -1,4 +1,41 @@
+# Everything on this site is open to every crawler. Nothing is blocked.
+# Search and AI-assistant crawlers are named on purpose, so each one can see it is welcome.
+# A crawler that has its own group below ignores the "*" group, so every group repeats Allow: /.
+
 User-agent: *
+Allow: /
+
+# Google (Google-Extended is Google's switch for Gemini training and grounding; it does not affect Search)
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Bing, which also feeds Copilot
+User-agent: Bingbot
+Allow: /
+
+# OpenAI: ChatGPT search, ChatGPT browsing on a user's behalf, and the GPTBot crawler
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Apple
+User-agent: Applebot
 Allow: /
 
 Sitemap: https://localaishop.com/sitemap.xml

@@ -1,16 +1,23 @@
 /* exit-popup.js: the "before you go" email offer on /book and /examples.
-   Loaded with `defer` after carry.js. One copy of the wording and logic for both pages.
+   Loaded with `defer` after carry.js. One copy of the logic for both pages.
 
-   LAS_POPUP_ENDPOINT: where the form posts. While it is empty, the pop-up never appears
-   on the live site, and on localhost it opens in preview mode and sends nothing.
+   The email form is a GoHighLevel form shown inside this pop-up in an iframe. Its heading, wording,
+   fields, button and thank-you message are written in GoHighLevel, not here. This file only opens and
+   closes the pop-up and passes the letter's tags to the form.
+
+   LAS_POPUP_GHL_FORM_ID: the id of that form (the part after /widget/form/ in its embed code).
+   While it is empty, the pop-up never appears on the live site, and on localhost it opens a preview
+   placeholder that loads nothing from GoHighLevel.
    Setup notes live in the private workshop repo (LAUNCH.md), not in this public file. */
-var LAS_POPUP_ENDPOINT = '';
+var LAS_POPUP_GHL_FORM_ID = '';
+var LAS_POPUP_GHL_BASE = 'https://api.leadconnectorhq.com/widget/form/';
+var LAS_POPUP_GHL_EMBED = 'https://link.msgsndr.com/js/form_embed.js';
 
 (function () {
   'use strict';
-  var ENDPOINT = LAS_POPUP_ENDPOINT;
+  var FORM_ID = LAS_POPUP_GHL_FORM_ID;
   var PREVIEW_HOSTS = /^(localhost|127\.0\.0\.1|\[::1\])$/;
-  var LIVE = /^https?:\/\//i.test(ENDPOINT);
+  var LIVE = /^[A-Za-z0-9]{6,64}$/.test(FORM_ID);
   var PREVIEW = !LIVE && PREVIEW_HOSTS.test(window.location.hostname);
   var ARM_MS = 20000;            // phones: the scroll-up trigger waits this long on the page
   var KEY_SHOWN = 'las_exit_popup_shown';
@@ -42,48 +49,69 @@ var LAS_POPUP_ENDPOINT = '';
   window.lasExitPopup = api;
   if (!LIVE && !PREVIEW) { return; }
 
-  var HTML =
-    '<form class="xp-form" method="dialog" novalidate>' +
-      '<button type="button" class="xp-x" aria-label="Close">&times;</button>' +
-      '<h2 class="xp-h" id="xp-title">Not ready to talk yet?</h2>' +
-      '<p class="xp-p">Get practical ways AI can help a business like yours run on jet fuel. Short emails from me, Lucas, here in Napa. Unsubscribe anytime.</p>' +
-      '<div class="xp-fields">' +
-        '<label>Your name<input name="name" type="text" autocomplete="name" required maxlength="80"></label>' +
-        '<label>Email<input name="email" type="email" autocomplete="email" required maxlength="120"></label>' +
-        '<label>Business name <span class="xp-opt">(optional)</span><input name="business_name" type="text" autocomplete="organization" maxlength="120"></label>' +
-        '<label class="xp-hp" aria-hidden="true">Leave this empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label>' +
-        '<button type="submit" class="xp-btn">Send me the short emails</button>' +
-        '<p class="xp-small">Email only, nothing by text. <a href="privacy.html">How I handle your details</a>.</p>' +
-      '</div>' +
-      '<p class="xp-msg" role="status" aria-live="polite"></p>' +
-      '<button type="button" class="xp-no">No thanks</button>' +
-    '</form>';
-
   var CSS =
     '.xp{border:0;padding:0;margin:auto;border-radius:14px;max-width:420px;width:calc(100% - 32px);max-height:calc(100% - 32px);overflow:auto;background:#faf9f6;color:#111418;' +
       'box-shadow:0 24px 60px rgba(0,0,0,.35);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}' +
     '.xp::backdrop{background:rgba(17,20,24,.55)}' +
-    '.xp-form{padding:28px 24px 18px;position:relative}' +
-    '.xp-x{position:absolute;top:8px;right:8px;width:44px;height:44px;border:0;background:transparent;font-size:28px;line-height:1;color:#5d6570;cursor:pointer;border-radius:8px}' +
+    '.xp-shell{padding:44px 12px 14px;position:relative}' +
+    '.xp-x{position:absolute;top:8px;right:8px;width:44px;height:44px;border:0;background:transparent;font-size:28px;line-height:1;color:#5d6570;cursor:pointer;border-radius:8px;z-index:2}' +
     '.xp-x:hover,.xp-x:focus-visible{background:#ece8e1;color:#111418}' +
-    '.xp-h{font-family:Georgia,"Times New Roman",serif;font-size:23px;line-height:1.2;margin:0 36px 10px 0}' +
-    '.xp-p{font-size:15.5px;line-height:1.55;color:#2e343b;margin:0 0 16px}' +
-    '.xp-fields label{display:block;font-size:14px;font-weight:700;margin-bottom:12px}' +
-    '.xp-fields input{display:block;width:100%;margin-top:5px;padding:12px;font-size:16px;border:1px solid #cfc9bf;border-radius:8px;background:#fff;color:#111418}' +
-    '.xp-fields input:focus{outline:2px solid #c94f00;outline-offset:1px;border-color:#c94f00}' +
-    '.xp-opt{font-weight:400;color:#5d6570}' +
-    '.xp-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}' +
-    '.xp-btn{display:block;width:100%;border:0;background:#c94f00;color:#fff;font-weight:700;font-size:16px;padding:15px 20px;border-radius:10px;cursor:pointer;margin-top:4px}' +
-    '.xp-btn:hover{background:#a84200}' +
-    '.xp-btn[disabled]{opacity:.6;cursor:default}' +
-    '.xp-small{font-size:12.5px;color:#5d6570;margin:10px 0 0}' +
-    '.xp-small a{color:#a84200}' +
-    '.xp-msg{font-size:15px;font-weight:600;margin:12px 0 0;color:#0d8a4f}' +
-    '.xp-msg:empty{display:none}' +
-    '.xp-msg.err{color:#a84200}' +
-    '.xp-no{display:block;margin:10px auto 0;border:0;background:transparent;color:#5d6570;font-size:14px;text-decoration:underline;cursor:pointer;padding:8px}';
+    '.xp-frame{display:block;width:100%;height:420px;min-height:320px;border:0;background:transparent}' +
+    '.xp-preview{margin:0 12px 8px;padding:20px 16px;border:1px dashed #cfc9bf;border-radius:10px;font-size:15px;line-height:1.5;color:#2e343b}' +
+    '.xp-no{display:block;margin:6px auto 0;border:0;background:transparent;color:#5d6570;font-size:14px;text-decoration:underline;cursor:pointer;padding:8px}';
 
-  var dlg, form, msg, lastFocus, closedOnce = false;
+  var dlg, shell, lastFocus, closedOnce = false;
+
+  // The GoHighLevel form's address, with the letter's tags (and where the visit came from) on the end,
+  // so hidden fields of the same names in the form can record them.
+  function formSrc() {
+    var t = tags(), q = [];
+    Object.keys(t).forEach(function (k) { q.push(encodeURIComponent(k) + '=' + encodeURIComponent(t[k])); });
+    q.push('source=exit-popup');
+    if (t.utm_content) { q.push('letter_id=' + encodeURIComponent(t.utm_content)); }
+    q.push('page=' + encodeURIComponent(window.location.pathname));
+    return LAS_POPUP_GHL_BASE + encodeURIComponent(FORM_ID) + '?' + q.join('&');
+  }
+
+  // GoHighLevel's own script resizes the iframe to fit the form. Loaded once, and only when the pop-up opens.
+  function loadEmbed() {
+    if (document.querySelector('script[data-las-ghl-embed]')) { return; }
+    var s = document.createElement('script');
+    s.src = LAS_POPUP_GHL_EMBED;
+    s.async = true;
+    s.setAttribute('data-las-ghl-embed', '1');
+    document.body.appendChild(s);
+  }
+
+  function addFrame() {
+    var id = 'inline-' + FORM_ID;
+    var f = document.createElement('iframe');
+    f.className = 'xp-frame';
+    f.id = id;
+    f.title = 'Email sign-up form';
+    f.setAttribute('data-layout', "{'id':'INLINE'}");
+    f.setAttribute('data-trigger-type', 'alwaysShow');
+    f.setAttribute('data-trigger-value', '');
+    f.setAttribute('data-activation-type', 'alwaysActivated');
+    f.setAttribute('data-activation-value', '');
+    f.setAttribute('data-deactivation-type', 'neverDeactivate');
+    f.setAttribute('data-deactivation-value', '');
+    f.setAttribute('data-form-name', 'Email sign-up');
+    f.setAttribute('data-height', '420');
+    f.setAttribute('data-layout-iframe-id', id);
+    f.setAttribute('data-form-id', FORM_ID);
+    f.src = formSrc();
+    shell.insertBefore(f, shell.querySelector('.xp-no'));
+    loadEmbed();
+  }
+
+  function addPreview() {
+    var d = document.createElement('p');
+    d.className = 'xp-preview';
+    d.setAttribute('role', 'status');
+    d.textContent = 'Preview only: the email form is not connected yet, so nothing loads here.';
+    shell.insertBefore(d, shell.querySelector('.xp-no'));
+  }
 
   function build() {
     if (dlg) { return dlg; }
@@ -93,17 +121,20 @@ var LAS_POPUP_ENDPOINT = '';
     dlg = document.createElement('dialog');
     dlg.className = 'xp';
     dlg.id = 'exit-popup';
-    dlg.setAttribute('aria-labelledby', 'xp-title');
-    dlg.innerHTML = HTML;
+    dlg.setAttribute('aria-label', 'Email sign-up');
+    dlg.innerHTML =
+      '<div class="xp-shell">' +
+        '<button type="button" class="xp-x" aria-label="Close">&times;</button>' +
+        '<button type="button" class="xp-no">No thanks</button>' +
+      '</div>';
     document.body.appendChild(dlg);
-    form = dlg.querySelector('form');
-    msg = dlg.querySelector('.xp-msg');
+    shell = dlg.querySelector('.xp-shell');
     dlg.querySelector('.xp-x').addEventListener('click', close);
     dlg.querySelector('.xp-no').addEventListener('click', close);
     dlg.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
     dlg.addEventListener('keydown', function (e) { if (e.key === 'Escape') { e.preventDefault(); close(); } });
     dlg.addEventListener('click', function (e) { if (e.target === dlg) { close(); } });  // tap outside the card
-    form.addEventListener('submit', submit);
+    if (LIVE) { addFrame(); } else { addPreview(); }
     return dlg;
   }
 
@@ -127,45 +158,6 @@ var LAS_POPUP_ENDPOINT = '';
     closedOnce = true;
     dlg.close();
     if (lastFocus && lastFocus.focus) { try { lastFocus.focus(); } catch (e) { /* gone */ } }
-  }
-
-  function say(text, isErr) { msg.textContent = text; msg.className = 'xp-msg' + (isErr ? ' err' : ''); }
-
-  function submit(e) {
-    e.preventDefault();
-    var name = form.elements.name.value.trim();
-    var email = form.elements.email.value.trim();
-    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      say('Please add your name and a working email.', true);
-      (name ? form.elements.email : form.elements.name).focus();
-      return;
-    }
-    var t = tags();
-    var body = new URLSearchParams();
-    body.append('name', name);
-    body.append('email', email);
-    body.append('business_name', form.elements.business_name.value.trim());
-    body.append('source', 'exit-popup');
-    body.append('letter_id', t.utm_content || '');
-    Object.keys(t).forEach(function (k) { body.append(k, t[k]); });
-    body.append('tags', ['exit-popup', t.utm_content].filter(Boolean).join(','));
-    body.append('page', window.location.pathname);
-    api.lastPayload = body.toString();
-    var btn = form.querySelector('.xp-btn');
-    function done() {
-      dlg.querySelector('.xp-fields').style.display = 'none';
-      say('Thanks, ' + name + '. Watch for an email from lucas@localaishop.com.');
-      dlg.querySelector('.xp-no').textContent = 'Close';
-    }
-    if (form.elements.website.value) { done(); return; }              // a bot filled the hidden field
-    if (!LIVE) { say('Preview only: this form is not connected to GoHighLevel yet, so nothing was sent.', true); return; }
-    btn.disabled = true;
-    fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', body: body })
-      .then(done)
-      .catch(function () {
-        btn.disabled = false;
-        say('That did not go through. You can email me at lucas@localaishop.com instead.', true);
-      });
   }
 
   // Desktop: the pointer leaves through the top of the window (toward the tabs or the back button).

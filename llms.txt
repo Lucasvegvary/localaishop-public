@@ -1,0 +1,40 @@
+# The Local AI Shop
+
+> The Local AI Shop is a Napa, California business run by its founder, Lucas Vegvary. It helps owner-run home and trade service businesses (roughly 2 to 20 people) in Napa, Solano and Sonoma counties with the office work that waits for them after close: email, scheduling, quotes and follow-up. It starts with a free 15-minute call. The paid service costs $999 and ends in a written report and a walkthrough.
+
+Key facts:
+- Who it is for: owner-run home and trade service businesses, such as HVAC, plumbing, electrical, roofing, remodeling, landscaping, cleaning, pest control and auto repair.
+- Where: Napa, Solano and Sonoma counties. Towns named on the site: Napa, American Canyon, Calistoga, Vallejo, Benicia, Fairfield, Vacaville and Dixon, and nearby towns.
+- Not taken on yet: medical, dental, chiropractic, veterinary or therapy practices.
+- The free 15-minute call: a short video call about how your week goes. Lucas names the one tool he would start with for your business, with its price and setup time, and that answer is yours to keep.
+- The $999 paid service: a 45-minute discovery interview, a nine-page written report, a 4-day quick-start plan and a 30-minute walkthrough. A competent human in the loop checks the report before you see it. The paid service always starts with the free call.
+- Guarantee (exact wording from the terms page): "If, after your 45-minute conversation, we can't document at least five reclaimable hours a week in your business — honest, non-duplicative hours you confirm — you still receive your full Shift Sheet AND we refund the $999." Conditions, also exact: "How we count, and the only conditions: the hours come from time estimates you confirm out loud on your discovery call, itemized per tool in your Shift Sheet, with no task counted twice. Claim window: 30 days from the day your Shift Sheet is delivered. Refunds go to your original payment method; we start the refund ourselves, and how quickly it posts depends on your card issuer." Full terms: https://localaishop.com/terms.html
+- If you want it built for you: The First Shift Build is $2,900 fixed. For it, or a custom build quoted from the report, the full $999 credits toward it.
+- Websites: for shops with no website, Lucas builds one first, as a sample, before any call. Keeping it is $0 up front and $99 a month, stop anytime, or $500 to own it outright.
+- Lucas is not paid by any company he recommends. If that changes, the written report says so next to that pick, before you buy anything. The examples on the site are examples, not client results.
+- Contact: lucas@localaishop.com or (707) 940-1306. Mail: 3325 Jefferson St #1131, Napa, CA 94558. The Local AI Shop is operated by My Custom Sleep Journey LLC; charges appear on card statements as LOCAL AI SHOP.
+
+## Start here
+
+- [Home](https://localaishop.com/): what the service is, how it works, the price, the guarantee and the questions owners ask
+- [Book the free 15-minute call](https://localaishop.com/book): a short page with the booking button
+
+## Examples and a sample
+
+- [Practical examples by trade](https://localaishop.com/examples.html): everyday office work in each trade and the kind of tool that usually handles each piece; examples, not client results
+- [Sample report (fictional business)](https://localaishop.com/sample-report.html): the kind of written report a paying client gets; the business, hours and rates are made up
+
+## Notes
+
+- [Notes on using AI the right way](https://localaishop.com/notes/): plain notes for owner-run trade businesses
+- [Missed-call text-back: do you need one?](https://localaishop.com/notes/missed-call-text-back.html): what an automatic text to a caller you couldn't answer does, who it fits and what to check before you buy one
+- [Why quotes go quiet: a follow-up check](https://localaishop.com/notes/why-quotes-go-quiet.html): ordinary reasons a quote gets no answer, how to tell if your estimates need a follow-up system and what to check first
+- [After-hours calls: what to check first](https://localaishop.com/notes/after-hours-calls-voicemail-answering-service-or-ai.html): voicemail, an answering service or an AI receptionist for after-hours calls, and what a small trade shop should check first
+- [Using AI the right way when it's your name on the truck](https://localaishop.com/notes/using-ai-the-right-way.html): five plain rules for using AI in a trade business
+- [Keep a human in the loop when you use AI](https://localaishop.com/notes/keep-a-human-in-the-loop.html): where a person has to stay in charge, and how to make that check fast
+- [You can't check AI work you don't understand](https://localaishop.com/notes/know-what-youre-asking-for.html): why knowing your own work makes AI useful, and why to start with one routine task
+
+## Terms and privacy
+
+- [Terms, guarantee and refund policy](https://localaishop.com/terms.html): what is sold, what it costs, the guarantee in writing and how refunds work
+- [Privacy policy and SMS terms](https://localaishop.com/privacy.html): what is collected, why, how long it is kept, call recording and appointment texts
