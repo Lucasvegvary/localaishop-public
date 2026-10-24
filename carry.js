@@ -5,7 +5,7 @@
    which letter the visit came from after the click. It sets no cookies, stores nothing, and sends
    nothing anywhere: it only rewrites links on the page. Values that aren't plain letters, digits,
    dots, dashes, underscores or tildes (100 characters max) are ignored.
-   Booking links are marked with the data-book attribute. */
+   Booking links (and the embedded booking calendar's iframe) are marked with the data-book attribute. */
 (function () {
   'use strict';
   var KEY = /^(utm_(source|medium|campaign|content|term|id)|code)$/;
@@ -54,6 +54,13 @@
       } else if (isOwnPage(a)) {
         a.setAttribute('href', carry(raw, pairs));
       }
+    }
+    /* The embedded booking calendar on /book is an iframe, not a link: carry the tags onto its address too,
+       so a visitor who books inside the page is attributed to the same letter as one who clicks through. */
+    var frames = document.querySelectorAll('iframe[data-book]');
+    for (var j = 0; j < frames.length; j++) {
+      var src = frames[j].getAttribute('src');
+      if (/^https?:\/\//i.test(src)) { frames[j].setAttribute('src', carry(src, pairs)); }
     }
   }
 

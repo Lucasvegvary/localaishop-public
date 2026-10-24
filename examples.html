@@ -80,6 +80,20 @@
   nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px;max-width:1080px}
   .logo{font-family:Georgia,serif;font-weight:700;font-size:20px;text-decoration:none;white-space:nowrap}
   .logo span{color:var(--accent)}
+  /* Oct 15 audit: full nav (was logo + booking button only); rules copied from index.html */
+  nav .links{display:flex;gap:26px;align-items:center;font-size:14.5px}
+  nav .links a{text-decoration:none;opacity:.85;white-space:nowrap}
+  nav .links a:hover{opacity:1}
+  nav .links .btn{padding:10px 18px;font-size:14px;opacity:1}
+  .mnav{display:none;position:relative}
+  .mnav summary{list-style:none;cursor:pointer;font-size:14.5px;padding:8px 12px;border:1px solid rgba(255,255,255,.3);border-radius:8px}
+  .mnav summary::-webkit-details-marker{display:none}
+  .mnav[open] summary{background:rgba(255,255,255,.1)}
+  .mnav .panel{position:absolute;right:0;top:44px;background:var(--ink-2);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:10px 0;min-width:190px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+  .mnav .panel a{display:block;padding:10px 18px;text-decoration:none;font-size:15px}
+  .mnav .panel a:hover{background:rgba(255,255,255,.06)}
+  @media(max-width:1000px){ nav .links > a:not(.btn){display:none} .mnav{display:block} }
+  @media(max-width:620px){ nav .links{gap:8px} nav .links>.btn{order:-1;white-space:nowrap} .mnav summary{padding:8px 10px} }
   nav .btn{padding:10px 18px;font-size:14px;white-space:nowrap}
   @media(max-width:620px){ .nx{display:none} nav .btn{padding:9px 12px;font-size:13.5px} }
   @media(max-width:560px){ html,body{overflow-x:hidden;overflow-x:clip} .wrap{padding-inline:20px} nav .wrap{height:60px} .logo{font-size:17px} }
@@ -146,7 +160,26 @@
 <nav>
   <div class="wrap">
     <a class="logo" href="index.html">The Local AI Shop<span>.</span></a>
-    <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book<span class="nx"> my</span> free<span class="nx"> 15-minute</span> call</a>
+    <div class="links">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#guarantee">The guarantee</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="sample-report.html">Sample report</a>
+      <a href="index.html#faq">Questions</a>
+      <details class="mnav">
+        <summary>Menu</summary>
+        <div class="panel">
+          <a href="index.html#how">How it works</a>
+          <a href="index.html#guarantee">The guarantee</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="sample-report.html">Sample report (fictional shop)</a>
+          <a href="index.html#faq">Questions</a>
+          <a href="notes/">Notes on using AI</a>
+          <a data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
+        </div>
+      </details>
+      <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book<span class="nx"> my</span> free<span class="nx"> 15-minute</span> call</a>
+    </div>
   </div>
 </nav>
 

@@ -82,7 +82,11 @@
         { "@type": "City", "name": "Benicia, California" },
         { "@type": "City", "name": "Fairfield, California" },
         { "@type": "City", "name": "Vacaville, California" },
-        { "@type": "City", "name": "Dixon, California" }
+        { "@type": "City", "name": "Dixon, California" },
+        { "@type": "City", "name": "Sonoma, California" },
+        { "@type": "City", "name": "Petaluma, California" },
+        { "@type": "City", "name": "Rohnert Park, California" },
+        { "@type": "City", "name": "Santa Rosa, California" }
       ],
       "founder": { "@id": "https://localaishop.com/#founder" },
       "parentOrganization": { "@type": "Organization", "name": "My Custom Sleep Journey LLC" },
@@ -120,6 +124,24 @@
           "priceCurrency": "USD",
           "url": "https://localaishop.com/#pricing",
           "itemOffered": { "@type": "Service", "name": "The First Shift Build" }
+        },
+        {
+          "@type": "Offer",
+          "url": "https://localaishop.com/#website",
+          "price": "99",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "99",
+            "priceCurrency": "USD",
+            "billingDuration": 1,
+            "unitCode": "MON"
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "A website built for you",
+            "description": "For shops with no website: $0 up front, then $99 a month, stop anytime, or $500 to own it outright."
+          }
         }
       ]
     },
@@ -155,10 +177,10 @@
         },
         {
           "@type": "Question",
-          "name": "What if you can't find 5 hours in my business?",
+          "name": "What if the tools in my report don't save me the hours per week my report estimates?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You still receive your full written report and your walkthrough, and I refund the $999. I count only honest, non-duplicative hours, starting from time estimates you confirm out loud on your discovery call, and I never pad the numbers to dodge the refund. The full wording and its conditions are in the guarantee above and on my terms page."
+            "text": "If you tried the tools and they didn't save you the hours per week your report estimates, email lucas@localaishop.com within 60 days of your walkthrough and we refund everything you paid for the $999 service to your card, the full $999 if you paid full price. No arguing, and you keep your report. The hours per week your report estimates are the weekly total printed in your report, built from the time estimates you confirmed out loud on your discovery call. The full wording and its conditions are in the guarantee above and on my terms page."
           }
         },
         {
@@ -190,7 +212,7 @@
           "name": "Aren't we too small for this?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Small is exactly who this is for. I work with owner-run home and trade service businesses across Napa, Solano and Sonoma counties, HVAC, plumbing, electrical, roofing, remodeling, landscaping, cleaning, pest control and auto repair, roughly 2 to 20 people. In person across those three counties, by video call anywhere in the Bay Area. Big companies have IT departments; you've got you. Five hours a week back matters more at your size, not less."
+            "text": "Small is exactly who this is for. I work with owner-run home and trade service businesses across Napa, Solano and Sonoma counties, HVAC, plumbing, electrical, roofing, remodeling, landscaping, cleaning, pest control and auto repair, roughly 2 to 20 people. In person across those three counties, by video call anywhere in the Bay Area. Big companies have IT departments; you've got you. Getting hours back matters more at your size, not less."
           }
         },
         {
@@ -307,7 +329,7 @@
   .mnav .panel{position:absolute;right:0;top:44px;background:var(--ink-2);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:10px 0;min-width:190px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
   .mnav .panel a{display:block;padding:10px 18px;text-decoration:none;font-size:15px}
   .mnav .panel a:hover{background:rgba(255,255,255,.06)}
-  @media(max-width:1000px){
+  @media(max-width:1210px){
     nav .links > a:not(.btn){display:none}
     .mnav{display:block}
   }
@@ -499,6 +521,7 @@
       <a href="examples.html">Examples</a>
       <a href="#guarantee">The guarantee</a>
       <a href="#pricing">Pricing</a>
+      <a href="sample-report.html">Sample report</a>
       <a href="#faq">Questions</a>
       <a href="notes/">Notes</a>
       <details class="mnav">
@@ -508,6 +531,7 @@
           <a href="examples.html">Examples for your trade</a>
           <a href="#guarantee">The guarantee</a>
           <a href="#pricing">Pricing</a>
+          <a href="sample-report.html">Sample report (fictional shop)</a>
           <a href="#faq">Questions</a>
           <a href="notes/">Notes on using AI</a>
           <a data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
@@ -532,9 +556,9 @@
     <span class="sub-note" style="color:#9aa3ad">After you pick a time: your name, five quick yes/no questions, then your phone and email.</span>
     <p class="sub-note" style="display:flex;align-items:center;gap:10px;margin-top:14px;color:#c9d0d8"><img src="photos/lucas.jpg" alt="Lucas Vegvary" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none" loading="eager" decoding="async"><span><a href="#founder" style="color:inherit">Lucas Vegvary, Napa.</a> I answer the phone and run the free call myself.</span></p>
     <div class="strip">
-      <div><p class="sh">Guaranteed in writing.</p><p>Five reclaimable hours a week, confirmed by you, or I refund the $999. You keep your written report either way. <a href="#guarantee">Read the exact wording</a>.</p></div>
+      <div><p class="sh">Guaranteed in writing.</p><p>Try the tools in your report. If they don't save you the hours per week your report estimates, email lucas@localaishop.com within 60 days of your walkthrough and we refund everything you paid for the $999 service to your card (the full $999 if you paid full price). You keep your report. <a href="#guarantee">Read the full guarantee</a>.</p></div>
       <div><p class="sh">$999, flat.</p><p>The interview, written report, walkthrough and your first hour of setup help. Stated up front because you'd find out anyway.</p></div>
-      <div><p class="sh">No long-term contracts.</p><p>One paid service. What happens after is entirely up to you.</p></div>
+      <div><p class="sh">No long-term contracts.</p><p>One paid service to start. What happens after is entirely up to you.</p></div>
       <div><p class="sh">You keep the report.</p><p>Every page, every tool, either way.</p></div>
     </div>
   </div>
@@ -663,12 +687,12 @@
 <section class="guarantee" id="guarantee">
   <div class="wrap">
     <span class="kicker">The part you should read twice</span>
-    <h2 class="sec">The guarantee, in its exact wording.</h2>
+    <h2 class="sec">The guarantee, in writing.</h2>
     <div class="gdoc">
       <span class="gk">Written guarantee · the same wording on my terms page, in writing before you pay</span>
-      <h3>Five hours found, or your $999 comes back. You keep the report either way.</h3>
-      <p class="text">"If, after your 45-minute conversation, we can't document at least five reclaimable hours a week in your business — honest, non-duplicative hours you confirm — you still receive your full Shift Sheet AND we refund the $999."</p>
-      <p class="conds">How we count, and the only conditions: the hours come from time estimates you confirm out loud on your discovery call, itemized per tool in your Shift Sheet, with no task counted twice. Claim window: 30 days from the day your Shift Sheet is delivered. Refunds go to your original payment method; we start the refund ourselves, and how quickly it posts depends on your card issuer.</p>
+      <h3>Try the tools. If they don't save you the hours per week your report estimates, everything you paid for the $999 service comes back. You keep the report either way.</h3>
+      <p class="text">"Try the tools in your report. If they don't save you the hours per week your report estimates, email lucas@localaishop.com within 60 days of your walkthrough and we'll refund everything you paid to your card. No arguing, and you keep your report."</p>
+      <p class="conds">How we count, and the only conditions: you tried the tools in your report, and you email within 60 days of the day of your walkthrough. Your word is enough: tell us you tried the tools and they didn't save you those hours. The hours per week your report estimates are the weekly total printed in your report, built from the time estimates you confirmed out loud on your discovery call. The refund is every dollar you paid for this $999 service, to the card you paid with: if you paid full price, that is the full $999. Build payments are not part of it, and taking the refund ends your $999 credit toward a build. Any referral credit you used goes back on your account with its original expiry date. We start the refund ourselves once you email, and how quickly it posts depends on your card issuer.</p>
       <div class="sig">
         <div><b>Lucas Vegvary</b>Founder, The Local AI Shop</div>
         <div>Napa, California · 2026</div>
@@ -691,7 +715,7 @@
         <span class="tag">Start here</span>
         <h3>The paid service</h3>
         <div class="amount">$999 <small>one time</small></div>
-        <div class="twoways">A human-verified assessment and action plan for the work you still do by hand after close. One price, stated up front, and the written guarantee above applies in its exact wording.</div>
+        <div class="twoways">A human-verified assessment and action plan for the work you still do by hand after close. One price, stated up front, and the written guarantee above applies.</div>
         <ul>
           <li>45-minute discovery interview</li>
           <li>Your nine-page written report</li>
@@ -731,7 +755,7 @@
     </div>
     <div class="plate" id="website" style="margin-top:28px;max-width:760px">
       <h3 style="margin:0 0 8px">No website yet? I build one first.</h3>
-      <p style="margin:0">Some shops I write to have no website at all. For those I build one before we ever talk, so you can see it working before you decide anything. If you keep it, it's $0 up front and $99 a month, stop anytime, or $500 to own it outright. It's built so Google and the AI search tools can find you, and the site and its login are yours. Ask on the free call, or email <a href="mailto:lucas@localaishop.com">lucas@localaishop.com</a>.</p>
+      <p style="margin:0">Some shops I write to have no website at all. For those I build one before we ever talk, so you can see it working before you decide anything. If you keep it, it's $0 up front and $99 a month, stop anytime, or $500 to own it outright. It's built so Google and the AI search tools can find you, and the web address is yours either way. Ask on the free call, or email <a href="mailto:lucas@localaishop.com">lucas@localaishop.com</a>.</p>
     </div>
   </div>
 </section>
@@ -763,7 +787,7 @@
       </div>
       <div>
         <h3>What holds me accountable</h3>
-        <div class="plate" style="margin-bottom:12px"><h4>The refund is the review.</h4><p>The guarantee above isn't marketing; it's the exact text on my terms page, in writing before you pay. If the honest count comes in under five hours, it costs me $999 and the afternoon it takes to say so.</p></div>
+        <div class="plate" style="margin-bottom:12px"><h4>The refund is the review.</h4><p>The guarantee above carries the same terms as my terms page, in writing before you pay. If you try the tools and they don't save you the hours per week your report estimates, email lucas@localaishop.com within 60 days of your walkthrough and we refund everything you paid for the $999 service to your card (the full $999 if you paid full price). You keep the report.</p></div>
                 <div class="plate"><h4>Counted with you, out loud.</h4><p>Every hour in your report starts from time you confirmed out loud on our discovery call. How much of each job a tool takes off is my reading of what you told me. If a tool only speeds up part of a job, it counts up to the minutes you gave for that part, and the report says "up to". A part you never put minutes on isn't counted yet. Hours round down, never up.</p></div>
       </div>
     </div>
@@ -785,8 +809,8 @@
       <div class="a">Good, you've already tried one tool. The assessment looks at the office-side work around it: email, scheduling, quotes, follow-up, and the pile that sits and waits for you. In the free 15 minutes, I look at one workflow with you and name one tool for it, with its price and setup time.</div>
     </details>
     <details class="q">
-      <summary>What if you can't find 5 hours in my business?</summary>
-      <div class="a">You still receive your full written report and your walkthrough, and I refund the $999. I count only honest, non-duplicative hours, starting from time estimates you confirm out loud on your discovery call, and I never pad the numbers to dodge the refund. The full wording and its conditions are in the guarantee above and on my <a href="terms.html">terms page</a>.</div>
+      <summary>What if the tools in my report don't save me the hours per week my report estimates?</summary>
+      <div class="a">If you tried the tools and they didn't save you the hours per week your report estimates, email lucas@localaishop.com within 60 days of your walkthrough and we refund everything you paid for the $999 service to your card, the full $999 if you paid full price. No arguing, and you keep your report. The hours per week your report estimates are the weekly total printed in your report, built from the time estimates you confirmed out loud on your discovery call. The full wording and its conditions are in the guarantee above and on my <a href="terms.html">terms page</a>.</div>
     </details>
     <details class="q">
       <summary>When do I get my written report?</summary>
@@ -802,7 +826,7 @@
     </details>
     <details class="q">
       <summary>Aren't we too small for this?</summary>
-      <div class="a">Small is exactly who this is for. I work with owner-run home and trade service businesses across Napa, Solano and Sonoma counties, HVAC, plumbing, electrical, roofing, remodeling, landscaping, cleaning, pest control and auto repair, roughly 2 to 20 people. In person across those three counties, by video call anywhere in the Bay Area. Big companies have IT departments; you've got you. Five hours a week back matters more at your size, not less.</div>
+      <div class="a">Small is exactly who this is for. I work with owner-run home and trade service businesses across Napa, Solano and Sonoma counties, HVAC, plumbing, electrical, roofing, remodeling, landscaping, cleaning, pest control and auto repair, roughly 2 to 20 people. In person across those three counties, by video call anywhere in the Bay Area. Big companies have IT departments; you've got you. Getting hours back matters more at your size, not less.</div>
     </details>
     <details class="q">
       <summary>Is there anyone you don't work with?</summary>
@@ -842,6 +866,7 @@
     <a class="btn" data-book href="https://api.leadconnectorhq.com/widget/bookings/las-mini-audit">Book my free 15-minute call</a>
     <span class="sub-note" style="color:#8d96a1">After you pick a time: your name, five quick yes/no questions, then your phone and email.</span>
     <span class="sub-note needs-phone" style="color:#8d96a1">Or call <a class="tel" href="tel:+17079401306">(707) 940-1306</a>. It rings through to me.</span>
+        <span class="sub-note" style="color:#8d96a1">Not ready for a call? Email one question to <a href="mailto:lucas@localaishop.com?subject=One%20question%20about%20my%20shop">lucas@localaishop.com</a> and I'll answer it within one business day.</span>
   </div>
 </section>
 
